@@ -1,0 +1,27 @@
+{
+  "name": "kakturi",
+  "version": "1.0.0",
+  "description": "Market Place",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Orlando2601/kakturi.git"
+  },
+  "keywords": [
+    "HTML",
+    "CSS",
+    "JS"
+  ],
+  "author": "Oswar Baez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Orlando2601/kakturi/issues"
+  },
+  "homepage": "https://github.com/Orlando2601/kakturi#readme",
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}
