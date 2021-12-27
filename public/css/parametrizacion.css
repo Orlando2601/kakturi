@@ -1,0 +1,25 @@
+* {
+    margin: 0;  /*Definimos un margen de 0*/
+    padding: 0;/* Definimos un padding de 0 */
+    box-sizing: border-box; /*con esta propiedad definimos que el margin y el padding sean incluidos dentro del tamaño de las cajas*/
+} /* Propiedades generales de Cajas */
+
+
+html{
+    font-size: 62.5%;
+}/* Escalar tamaño de fuente de html para el uso de rem */
+
+:root{
+    --gris-oscuro: #666;
+    --gris-claro: #ebebeb;
+    --verde: #39b54a;
+    --negro: black;
+    --blanco: #fff;
+    /*Tamaños de fuentes*/
+    --text-sm: 1.2em;
+    --text-md: 1.6em;
+    --text-lg: 1.8em;
+    --title-md: 2.4em;
+    /*Fuentes descargadas de web*/
+    --roboto-font: 'Kanit', sans-serif;
+}

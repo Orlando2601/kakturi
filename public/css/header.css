@@ -1,0 +1,19 @@
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(/images/background-header.svg);
+    background-size: cover;
+    flex-direction: column;
+    gap: 20px;
+    padding: 15px;
+}
+
+header img{
+    width: 50%;
+}
+header form input{
+background: rgba(244, 164, 66, 0.3);
+border-color:transparent;
+border-radius: 5px;
+}
