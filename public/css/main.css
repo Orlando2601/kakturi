@@ -1,0 +1,58 @@
+main {
+    border: solid;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+main article{
+    width: 176px;
+    height: 124px;
+    background-color: #F4A442;
+    position: relative;
+}
+main article:hover img{
+    opacity: 30%;
+}
+main article img{
+    width: 100%;
+    height: 100%;
+}
+main article:hover .vermas{
+    opacity: 100%;
+}
+main article .vermas{
+    opacity: 0%;
+    width: 176px;
+    height: 124px;
+    position: absolute;
+    top: 0px;
+    transition-property: opacity;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+main article .vermas label{
+    font-family: var(--kanit-font);
+    font-size: var(--title-md);
+    color: #125C13;
+    text-shadow: 0px 4px 4px #3E7C17;
+}
+main article .vermas p{
+    font-family: var(--kanit-font);
+    font-size: var(--text-md);
+    color: #125C13;
+    text-shadow: 0px 4px 4px #3E7C17;
+    
+}
+main article .vermas button{
+    border-radius: 5px;
+    padding: 5px;
+    background-color: #3E7C17;
+    opacity:70%;
+    font-family: var(--kanit-font);
+    box-shadow:0px 4px 4px #3E7C17 ;
+
+}
