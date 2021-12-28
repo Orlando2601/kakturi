@@ -1,58 +1,134 @@
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-image: url(/images/background-header.svg);
-    background-size: cover;
-    flex-direction: row;
-    padding: 15px;
-    max-height: 200px;
-}
-header .menu{
-    margin-left: 40px;
-    font-size: 5vw;
-    color:#125C13;
-    text-shadow: 0px 4px 4px #3E7C17;
-    height: 100%;
-}
 
-header .left{
-    margin-right: 10vw;
-    margin-left: 10vw;
-}
-header img{
-    width: 100%;
-    padding: 10px;
-}
-header form{
-    display: flex;
-    flex-direction: row;
-
-}
-header form input{
-background: rgba(244, 164, 66, 0.3);
-border-color:transparent;
-border-radius: 5px 0px 0px 5px;
-width: 100%;
-padding: 3px;
-}
-header form button{
-    background-color: rgba(244, 164, 66, 0.3);
-    border-color:transparent;
-    border-radius: 0px 5px 5px 0px;
-    color:#125C13;
-    text-shadow: 0px 4px 4px #3E7C17;
+@media(max-width:360px){
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-image: url(/images/background-header.svg);
+        background-size: cover;
+        flex-direction: row;
+        padding: 15px;
+        
+    }
+    header .menu{
+        margin-left: 30px;
+        font-size: 3em;
+        color:#125C13;
+        text-shadow: 0px 4px 4px #3E7C17;
+        height: 100%;
+    }
     
+    header .left{
+        margin-right: 10vw;
+        margin-left: 10vw;
+    }
+    header img{
+        width: 100%;
+        padding: 10px;
+    }
+    header form{
+        display: flex;
+        flex-direction: row;
+    
+    }
+    header form input{
+    background: rgba(244, 164, 66, 0.3);
+    border-color:transparent;
+    border-radius: 5px 0px 0px 5px;
+    width: 100%;
+    padding: 3px;
+    }
+    header form button{
+        background-color: rgba(244, 164, 66, 0.3);
+        border-color:transparent;
+        border-radius: 0px 5px 5px 0px;
+        color:#125C13;
+        text-shadow: 0px 4px 4px #3E7C17;
+        
+    }
+    header .icon {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        color: #125C13;
+        text-shadow: 0px 4px 4px #3E7C17;
+     
+    }
+    header .icon i{
+        width: fit-content;
+        font-size: 2em;
+        max-width: 100px;
+    }
 }
-header .icon {
-    display: flex;
-    flex-direction: column;
-    gap: 5vw;
-    color: #125C13;
-    text-shadow: 0px 4px 4px #3E7C17;
+@media (min-width:361px){
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-image: url(/images/background-header.svg);
+        background-size: cover;
+        flex-direction: row;
+        padding: 15px;
+        
+    }
+    header .menu{
+        margin-left: 50px;
+        font-size: 5em;
+        color:#125C13;
+        text-shadow: 0px 4px 4px #3E7C17;
+        height: 100%;
+    }
+    
+    header .left{
+        margin-right: 10vw;
+        margin-left: 10vw;
+    }
+    header img{
+        width: 100%;
+        padding: 10px;
+    }
+    header form{
+        display: flex;
+        flex-direction: row;
+    
+    }
+    header form input{
+    background: rgba(244, 164, 66, 0.3);
+    border-color:transparent;
+    border-radius: 5px 0px 0px 5px;
+    width: 100%;
+    padding: 3px;
+    }
+    header form button{
+        background-color: rgba(244, 164, 66, 0.3);
+        border-color:transparent;
+        border-radius: 0px 5px 5px 0px;
+        color:#125C13;
+        text-shadow: 0px 4px 4px #3E7C17;
+        
+    }
+    header .icon {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        color: #125C13;
+        text-shadow: 0px 4px 4px #3E7C17;
+     
+    }
+    header .icon i{
+        width: fit-content;
+        font-size: 3em;
+        max-width: 100px;
+    }
 }
-header .icon i{
-    width: fit-content;
-    font-size: 3em;
-    max-width: 100px;
+
+@media (min-width: 1350px){
+    body{
+        margin:auto;
+        max-width: 1350px;
+        box-shadow: 0px 0px 10px rgb(100, 100, 100); ;
+        }
+    header{
+        max-height: 200px;
+    }
 }
