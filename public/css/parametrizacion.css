@@ -17,9 +17,9 @@ html{
     --blanco: #fff;
     /*Tamaños de fuentes*/
     --text-sm: 1.2em;
-    --text-md: 1.6em;
-    --text-lg: 1.8em;
-    --title-md: 2.4em;
+    --text-md: 4vw;
+    --text-lg: 6vw;
+    --title-md: 4vw;
     /*Fuentes descargadas de web*/
     --kanit-font: 'Kanit', sans-serif;
 }
