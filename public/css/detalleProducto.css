@@ -1,0 +1,21 @@
+main .detalle {
+    width: 100vw;
+    height: 70vw;
+    background: none;
+
+   
+}
+main .detalle img{
+width: 100%;
+height: 100%;
+}
+main .detalle .descripcion{
+    font-family: var( --kanit-font);
+    font-size: var(--text-lg);
+    color: var(--negro);
+}
+main .detalle .precio{
+    font-family: var( --kanit-font);
+    font-size: var(--text-lg);
+    color: var(--negro);
+}

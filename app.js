@@ -10,3 +10,4 @@ app.set('view engine', 'ejs'); /* Expresamos a express motor de vistas como ejs 
 app.use(indexRouter); /* Definimos a express donde buscar las rutas */
 
 
+/* app.get('/', (req, res)=>{ res.sendFile(path.resolve(__dirname, './views/index.html'))}); */
