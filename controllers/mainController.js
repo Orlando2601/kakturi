@@ -20,12 +20,12 @@ const productos = [
         precio:"3000",
         img:"fimo.jpg"
     }
-]
+];
 
 
 const controllers ={
         products: (req,res)=>{
-            res.render('products')
+            res.render('products',{lista: productos})
         },
         home: (req,res)=>{
             res.render('home')
