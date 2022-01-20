@@ -1,5 +1,5 @@
 header{
-    background-color: #7ca04f;
+    background-color: #7db835 ;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -27,12 +27,12 @@ header .caja-enlace-header{
 }/* img logo */
 
 header .header-right .redes .iconred i{
-    background-color: #7ca04f ;
+    
     border: none;
     color: black;
 }/* Iconos redes */
 header .caja-enlace-header .iconred i{
-    background-color: #7ca04f ;
+   
     border: none;
     color: black;
     font-size: 2.5em;
@@ -53,17 +53,34 @@ header .header-right .redes .iconred i{
 @media (max-width: 599px) {
     /* HEADER */
     header{
+        display: flex;
         flex-direction: column;
+        
     } 
-    header .header-right{
-        display:none
+    header .caja-logo{
+        width: 60%;
     }
-
+    header .header-right{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 30%;
+    }
+    header .header-right .caja-enlace-header a{
+        font-family: var(--Dongle-font);
+        font-size: var( --text-sm);
+    }
+    header .header-right .caja-enlace-header .iconred a i {
+    
+        font-size: var( --text-sm);
+    }
 
 }
 
 @media (min-width: 600px) and (max-width:799px){
-
+    header{
+        flex-direction: column;
+    }
     header .header-right{
         display: flex;
         flex-direction: column;
@@ -71,7 +88,7 @@ header .header-right .redes .iconred i{
         width: 50%;
     }
     header .caja-logo{
-        width: 80%;
+        width: 50%;
     } 
 
 }
@@ -89,4 +106,14 @@ header .header-right .redes .iconred i{
     }
  
 
+}
+
+/* PROPIEDADES TEXTOS HEADER */
+header .header-right .caja-enlace-header a{
+    font-family: var(--Dongle-font);
+    font-size: var( --text-md);
+}
+header .header-right .caja-enlace-header .iconred a i {
+
+    font-size: var( --text-sm);
 }

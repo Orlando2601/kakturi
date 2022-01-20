@@ -1,7 +1,10 @@
-footer{
-
-    background-color:#E8E1D9; 
-    height: 150px;
-    width: 100vw;
-
+footer {
+    background-color: #7db835;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 15px;
+    width: 100%;
+    height:100%
 }
