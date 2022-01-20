@@ -1,134 +1,92 @@
+header{
+    background-color: #7ca04f;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 15px;
+    
+} /* estilos header */
 
-@media(max-width:360px){
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-image: url(/images/background-header.svg);
-        background-size: cover;
-        flex-direction: row;
-        padding: 15px;
-        
-    }
-    header .menu{
-        margin-left: 30px;
-        font-size: 3em;
-        color:#125C13;
-        text-shadow: 0px 4px 4px #3E7C17;
-        height: 100%;
-    }
-    
-    header .left{
-        margin-right: 2vw;
-        margin-left: 2vw;
-    }
-    header img{
-        width: 100%;
-        padding: 10px;
-    }
-    header form{
-        display: flex;
-        flex-direction: row;
-    
-    }
-    header form input{
-    background: rgba(244, 164, 66, 0.3);
-    border-color:transparent;
-    border-radius: 5px 0px 0px 5px;
-    width: 100%;
-    padding: 3px;
-    }
-    header form button{
-        background-color: rgba(244, 164, 66, 0.3);
-        border-color:transparent;
-        border-radius: 0px 5px 5px 0px;
-        color:#125C13;
-        text-shadow: 0px 4px 4px #3E7C17;
-        
-    }
-    header .icon {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        color: #125C13;
-        text-shadow: 0px 4px 4px #3E7C17;
-     
-    }
-    header .icon i{
-        width: fit-content;
-        font-size: 2em;
-        max-width: 100px;
-    }
-}
-@media (min-width:361px){
-    header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        background-image: url(/images/background-header.svg);
-        background-size: cover;
-        flex-direction: row;
-        padding: 15px;
-        
-    }
-    header .menu{
-        margin-left: 50px;
-        font-size: 5em;
-        color:#125C13;
-        text-shadow: 0px 4px 4px #3E7C17;
-        height: 100%;
-    }
-    
-    header .left{
-        margin-right: 2vw;
-        margin-left: 2vw;
-    }
-    header img{
-        width: 100%;
-        padding: 10px;
-    }
-    header form{
-        display: flex;
-        flex-direction: row;
-    
-    }
-    header form input{
-    background: rgba(244, 164, 66, 0.3);
-    border-color:transparent;
-    border-radius: 5px 0px 0px 5px;
-    width: 100%;
-    padding: 3px;
-    }
-    header form button{
-        background-color: rgba(244, 164, 66, 0.3);
-        border-color:transparent;
-        border-radius: 0px 5px 5px 0px;
-        color:#125C13;
-        text-shadow: 0px 4px 4px #3E7C17;
-        
-    }
-    header .icon {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-        color: #125C13;
-        text-shadow: 0px 4px 4px #3E7C17;
-     
-    }
-    header .icon i{
-        width: fit-content;
-        font-size: 3em;
-        max-width: 100px;
-    }
-}
+header .header-right .redes{
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-bottom: 20px;
 
-@media (min-width: 1350px){
-    body{
-        margin:auto;
-        max-width: 1350px;
-        box-shadow: 0px 0px 10px rgb(100, 100, 100); ;
-        }
+}/* Contenedor redes */
+header .caja-enlace-header{
+    display: flex;
+    justify-content: flex-end;
+    gap: 15px;
+    margin-bottom: 20px;
+}/* Contenedor enlaces header */
+
+.caja-logo img{
+    width: 100%;
+}/* img logo */
+
+header .header-right .redes .iconred i{
+    background-color: #7ca04f ;
+    border: none;
+    color: black;
+}/* Iconos redes */
+header .caja-enlace-header .iconred i{
+    background-color: #7ca04f ;
+    border: none;
+    color: black;
+    font-size: 2.5em;
+}/* Iconos redes */
+
+header .div-btn-header .a-btn-header{
+    font-size: 2em;
+    color: black;
+    text-decoration: none;
+}/* Eenlaces navegación */
+
+header .header-right .redes .iconred i{
+    font-size: 2.5em;
+}/* Tamaño iconos */
+/* MAIN */
+
+
+@media (max-width: 599px) {
+    /* HEADER */
     header{
-        max-height: 200px;
+        flex-direction: column;
+    } 
+    header .header-right{
+        display:none
     }
+
+
+}
+
+@media (min-width: 600px) and (max-width:799px){
+
+    header .header-right{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+    }
+    header .caja-logo{
+        width: 80%;
+    } 
+
+}
+
+@media (min-width:800px){
+
+    header .header-right{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    header .caja-logo{
+        width: 40%;
+    }
+ 
+
 }

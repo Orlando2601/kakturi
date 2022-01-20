@@ -19,6 +19,34 @@ const productos = [
         descripcion:"Sarta aros de fimo, colores variados. Diseña portagafas, collares, shoker y más.",
         precio:"3000",
         img:"fimo.jpg"
+    },
+    {
+        id:4,
+        titulo:"Fimo3",
+        descripcion:"Sarta aros de fimo, colores variados. Diseña portagafas, collares, shoker y más.",
+        precio:"4000",
+        img:"fimo.jpg"
+    },
+    {
+        id:5,
+        titulo:"Fimo3",
+        descripcion:"Sarta aros de fimo, colores variados. Diseña portagafas, collares, shoker y más.",
+        precio:"5000",
+        img:"fimo.jpg"
+    },
+    {
+        id:6,
+        titulo:"Fimo3",
+        descripcion:"Sarta aros de fimo, colores variados. Diseña portagafas, collares, shoker y más.",
+        precio:"6000",
+        img:"fimo.jpg"
+    },
+    {
+        id:7,
+        titulo:"Fimo3",
+        descripcion:"Sarta aros de fimo, colores variados. Diseña portagafas, collares, shoker y más.",
+        precio:"7000",
+        img:"fimo.jpg"
     }
 ];
 
