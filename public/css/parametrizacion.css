@@ -19,9 +19,9 @@ html{
     /*Tamaños de fuentes*/
     --text-sm: 1.2em;
     --text-md: 2.5em;
-    --text-lg: 6vw;
-    --title-md: 4vw;
+    --text-lg: 3em;
+    --title-md: 4em;
     /*Fuentes descargadas de web*/
     --kanit-font: 'Kanit', sans-serif;
-    --Dongle-font:'Dongle', sans-serif;
+    --Dongle-font:'Roboto Condensed', sans-serif;
 }

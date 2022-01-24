@@ -1,0 +1,63 @@
+.mainProductos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center; 
+}
+
+.mainProductos article {
+    width: 25%;
+    height: 25%;
+    position: relative;
+    overflow:hidden;
+}
+.mainProductos article:hover img{
+    opacity: 12%;
+    
+}
+
+.mainProductos article img{
+    width: 100%;
+    height: 100%;
+}
+
+.mainProductos article:hover .vermas{
+    opacity:60%;
+    width: 100%;
+    height: 100%;
+    
+    
+    
+}
+
+.mainProductos article .vermas{
+    opacity: 0%;
+    width: 30px;
+    height: 30px;
+    top: 0px;
+    position: absolute;
+    transition-property: opacity;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.mainProductos article:hover{
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    
+}
+.mainProductos article .vermas p{
+    font-family: var(--Dongle-font);
+    font-size: var(--text-lg);
+    color: black;
+    font-weight: bold;
+}
+.mainProductos article .vermas a{
+    font-family: var(--Dongle-font);
+    font-size: var(--text-lg);
+    color: black;
+    font-weight: bold;
+}

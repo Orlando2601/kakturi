@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/css/styles.css"> <!-- Configuración de carpeta para diseños CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" /><!-- Link para obtener iconos de la pagina enlazada, para agregar se debe ver la sintaxis que muetsra la pagina -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <%- include ('./partials/header') %>
+    <main class="registro">
+        <div class="iconoUser">
+            <i class="far fa-user"></i>
+        </div>
+        <form action="registrar">
+            <label for="nombre">Ingrese nombre</label>
+            <input type="text" name="nombre" placeholder="Nombre">
+            <label for="apellido">Ingrese apellido</label>
+            <input type="text" name="apellido" placeholder="Apellido">
+            <label for="correo">Ingrese Correo electrónico</label>
+            <input type="email" name="correo" placeholder="Correo">
+            <label for="contraseña">Ingrese Contraseña</label>
+            <input type="password" name="contraseña" placeholder="Contraseña">
+            <div class="botones">
+                <input class="btn" type="submit" value="Registrar">
+                <input class="btn" type="reset" value="Borrar">
+            </div>
+
+        </form>
+        
+    </main>
+    <%- include ('./partials/footer') %>
+    </body>
+</html>

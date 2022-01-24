@@ -1,0 +1,38 @@
+/* MAIN */
+.mainHome{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    
+}
+.mainHome section{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap:15px;
+  
+}
+
+.mainHome section .imagenSeccion{
+    max-width: 30vw;
+}
+.mainHome section .imagenSeccion img{
+    width: 100%;
+}
+
+/* ESTILOS DE TEXTO */
+.mainHome .descripcionSeccion p{
+    font-family: var(--Dongle-font);
+    font-size: var(--text-md);
+    line-height:0.7em;
+}
+.mainHome .descripcionSeccion h2{
+    font-family: var(--Dongle-font);
+    font-size: var(--text-lg);
+    font-weight: 400;
+    text-anchor: start;
+}
+
+
+

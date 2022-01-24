@@ -1,5 +1,5 @@
 footer {
-    background-color: #7db835;
+    background-color: #e4e7bb;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -7,4 +7,9 @@ footer {
     padding: 15px;
     width: 100%;
     height:100%
+}
+footer h4 {
+    font-family: var(--Dongle-font);
+    font-size: var(--title-md);
+    color: #3E6B1C
 }

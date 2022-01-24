@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/css/styles.css"> <!-- Configuración de carpeta para diseños CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" /><!-- Link para obtener iconos de la pagina enlazada, para agregar se debe ver la sintaxis que muetsra la pagina -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <%- include ('./partials/header') %>
+    <main class="mainCrearProducto">
+        <div class="iconoStock">
+            <i class="fas fa-cubes"></i>
+        </div>
+        <h1>Complete los datos del nuevo producto</h1>
+        <form action="/admin/nuevoProducto/" method="POST"  enctype="multipart/form-data" > <!-- enctype="multipart/form-data"> --> <!-- Usar esta config cuando se va a subir imagenes en el form sino se puede quitar el elemento o configurar  enctype="application/x-www-form-urlencoded"  para solo texto -->
+            
+            <div>
+                <label for="nombre">Nombre Producto</label>
+                <input type="text" id="nombre" name="nombre"  placeholder="Ingrese nombre de producto" >
+            </div>
+            <div>
+                <label for="cantidad">Cantidad disponible</label>
+                <input type="text" id="cantidad" name="cantidad" placeholder="Ingrese cantidad disponible" >
+            </div>
+            <div>
+                <label for="precio">Precio</label>
+                <input type="text" id="precio" name="precio" placeholder="Ingrese cantidad disponible" >
+            </div>
+            <div>
+                <label for="tamaño">Tamaño</label>
+                <input type="text" id="tamaño" name="tamaño" placeholder="Ingrese cantidad disponible" >
+            </div>
+            <div>
+                <label for="imagen">Imagen de descripción</label>
+                <input type="file" name="imagen" placeholder="Ingrese imagen de referencia" >
+            </div>
+            <div >
+                <input type="submit" value="Guardar">
+            </div>
+
+            
+            
+        </form>
+    </main>
+    <%- include ('./partials/footer') %>
+    </body>
+</html>

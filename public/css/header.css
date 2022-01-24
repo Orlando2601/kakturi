@@ -1,5 +1,5 @@
 header{
-    background-color: #7db835 ;
+    background-color: #e4e7bb ;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -22,25 +22,32 @@ header .caja-enlace-header{
     margin-bottom: 20px;
 }/* Contenedor enlaces header */
 
+.caja-logo a {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    
+}/* img logo */
+
 .caja-logo img{
-    width: 100%;
+    width:100%;
 }/* img logo */
 
 header .header-right .redes .iconred i{
     
     border: none;
-    color: black;
+    color: #3E6B1C;
 }/* Iconos redes */
 header .caja-enlace-header .iconred i{
    
     border: none;
-    color: black;
+    color: #3E6B1C;
     font-size: 2.5em;
 }/* Iconos redes */
 
 header .div-btn-header .a-btn-header{
     font-size: 2em;
-    color: black;
+    color: #3E6B1C;
     text-decoration: none;
 }/* Eenlaces navegación */
 
@@ -59,6 +66,13 @@ header .header-right .redes .iconred i{
     } 
     header .caja-logo{
         width: 60%;
+        display: flex;
+        justify-content: space-evenly;
+    } 
+    header .caja-logo a{
+        width: 60%;
+        display: flex;
+        justify-content: space-evenly;
     }
     header .header-right{
         display: flex;
@@ -70,6 +84,8 @@ header .header-right .redes .iconred i{
         font-family: var(--Dongle-font);
         font-size: var( --text-sm);
     }
+
+    
     header .header-right .caja-enlace-header .iconred a i {
     
         font-size: var( --text-sm);
@@ -88,7 +104,14 @@ header .header-right .redes .iconred i{
         width: 50%;
     }
     header .caja-logo{
-        width: 50%;
+        width: 60%;
+        display: flex;
+        justify-content: space-evenly;
+    } 
+    header .caja-logo a {
+        width: 60%;
+        display: flex;
+        justify-content: space-evenly;
     } 
 
 }

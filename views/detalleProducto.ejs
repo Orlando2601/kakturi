@@ -10,13 +10,43 @@
 </head>
 <body>
     <%-include ('./partials/header') %>
-    <main>
-        <div class="detalle">    
-            <img src="/images/fimo.jpg" alt="Fimo">
-            <h2><%= titulo %></h2>
-            <p class="descripcion"><%= descripcion %></p>
-            <p class="precio">$ <%= precio %></p>
-        </div>
+    <main class="detalleProducto">
+        <section class="imagenDetalle">
+            <img src="/images/dbProductos/<%= lista.img %>" alt="">
+        </section>
+        <section class="descripcionDetalle">
+            <form class="formCompra" action="comprar">
+                <h2><%= lista.titulo %></h2>
+                <h3><%= lista.descripcion %></h3>
+                <label for="precio">$<%= lista.precio %></label>
+                <input type="hidden" name="precio" value="<%= lista.precio %>">
+
+                <div class="listas">
+                    <label for="cantidad">Cantidad:</label>
+                    <select class="cantidad" name="cantidad" id="cantidad">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                   </select>           
+                </div>
+                   <input type="submit" name="comprar" value="Añadir Carrito">
+            </form>
+            <div class="botones">
+                <form class="formCompra"  action="/admin/editar-producto/<%= lista.referencia %>">
+                    <input class="edit" type="submit"  value="Editar Producto">
+                </form>
+                <form class="formCompra" action="/admin/borrar-producto/<%= lista.referencia %>?_method=delete" method="POST">
+                    <input  class="delete" type="submit"  value="Borrar Producto">
+                </form>
+            </div>
+            
+           
+        </section>
         
     </main>
     <%-include ('./partials/footer') %>
