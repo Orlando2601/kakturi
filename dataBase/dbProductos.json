@@ -19,5 +19,12 @@
   "descripcion": "hoja",
   "precio": "5500",
   "imagen": "imagen1643077596152.jpg"
+ },
+ {
+  "id": 4,
+  "titulo": "gatos",
+  "descripcion": "comida",
+  "precio": "25200",
+  "imagen": "imagen1643083330708.png"
  }
 ]

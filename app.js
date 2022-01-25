@@ -8,6 +8,8 @@ const userRouter = require('./routes/userRouter');
 const adminRouter = require('./routes/adminRouter');
 
 const methodOverride = require('method-override')
+const logMiddleware = require('./middlewares/logMiddleware')
+
 
 const app = express();/* Asignar express a una variable */
 
@@ -16,7 +18,7 @@ app.use(express.json());
 app.use(methodOverride('_method'));
 
 app.use(express.static(publicPath));/* Expresamos la variable que express debe usar para archivos estáticos */
-
+app.use(logMiddleware)
 
 app.set('view engine', 'ejs'); /* Expresamos a express motor de vistas como ejs */
 const port = process.env.PORT || 3000; /* Definimos la configuración del puerto en la variable port */

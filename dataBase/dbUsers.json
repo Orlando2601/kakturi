@@ -19,5 +19,19 @@
   "apellido": "qqqq",
   "correo": "jhecbje@hotmail",
   "contraseña": "000000000"
+ },
+ {
+  "id": 4,
+  "nombre": "Rodio",
+  "apellido": "baez",
+  "correo": "oswar@gmail",
+  "contraseña": "1234"
+ },
+ {
+  "id": 5,
+  "nombre": "oswar",
+  "apellido": "corredor",
+  "correo": "OSWAR@HOTMAIL.OM",
+  "contraseña": "1234567754"
  }
 ]
