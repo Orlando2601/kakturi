@@ -5,9 +5,6 @@ const multer = require('multer')
 const adminController = require('../controllers/adminController');
 
 
-
-
-
 /* Requerimientos multer para cargar archivos */
 let multerDiskStorage = multer.diskStorage({
     destination: (req, file, cb)=>{

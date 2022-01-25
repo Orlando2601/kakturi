@@ -14,22 +14,27 @@
         <div class="iconoUser">
             <i class="far fa-user"></i>
         </div>
+        <% if (locals.errors){ errors.forEach(error => { %>
+
+        <% })} %>
+       
         <form action="/user/registro" method="POST">
+
             <label for="nombre">Ingrese nombre</label>
-            <input type="text" name="nombre" placeholder="Nombre">
+            <input type="text" name="nombre" id="nombre"  value="<%= locals.old && old.nombre ? old.nombre : ' ' %>">
             <label for="apellido">Ingrese apellido</label>
-            <input type="text" name="apellido" placeholder="Apellido">
+            <input type="text" name="apellido" id="apellido" value="<%= locals.old && old.apellido ? old.apellido : ' ' %>">
             <label for="correo">Ingrese Correo electrónico</label>
-            <input type="email" name="correo" placeholder="Correo">
+            <input type="email" name="correo" id="correo" value="<%= locals.old && old.correo ? old.correo : ' ' %>">
             <label for="contraseña">Ingrese Contraseña</label>
-            <input type="password" name="contraseña" placeholder="Contraseña">
+            <input type="password" name="contraseña" id="contraseña" >
             <div class="botones">
                 <input class="btn" type="submit" value="Registrar">
                 <input class="btn" type="reset" value="Borrar">
             </div>
 
         </form>
-        
+       
     </main>
     <%- include ('./partials/footer') %>
     </body>
