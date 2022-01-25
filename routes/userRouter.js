@@ -3,7 +3,13 @@ const router = express.Router(); /* Definimos el método Router de express a la 
 const userController = require('../controllers/userController');
 
 router.get('/login', userController.login);
+
+
+
+
+
 router.get('/registro', userController.registro)
+router.post('/registro', userController.storeUser)
 
 
 module.exports = router;

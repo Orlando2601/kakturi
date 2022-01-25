@@ -1,0 +1,23 @@
+[
+ {
+  "id": "1",
+  "nombre": "oswar",
+  "apellido": "baez",
+  "correo": "oswar@gmail.com",
+  "password": "1234"
+ },
+ {
+  "id": 2,
+  "nombre": "oswar",
+  "apellido": "baez",
+  "correo": "oswar@gmail",
+  "contraseña": "1234"
+ },
+ {
+  "id": 3,
+  "nombre": "Rodio",
+  "apellido": "qqqq",
+  "correo": "jhecbje@hotmail",
+  "contraseña": "000000000"
+ }
+]
