@@ -1,3 +1,4 @@
+const req = require('express/lib/request');
 const fs = require('fs');
 const path = require('path')
 const productsFilePath = path.join(__dirname, '../dataBase/dbProductos.json');

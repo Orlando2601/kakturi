@@ -12,7 +12,7 @@
     <%-include ('./partials/header') %>
     <main class="detalleProducto">
         <section class="imagenDetalle">
-            <img src="/images/dbProductos/<%= lista.img %>" alt="">
+            <img src="/images/dbProductos/<%= lista.imagen %>" alt="">
         </section>
         <section class="descripcionDetalle">
             <form class="formCompra" action="comprar">
@@ -37,10 +37,10 @@
                    <input type="submit" name="comprar" value="Añadir Carrito">
             </form>
             <div class="botones">
-                <form class="formCompra"  action="/admin/editar-producto/<%= lista.referencia %>">
+                <form class="formCompra"  action="/admin/editar/<%= lista.id %>">
                     <input class="edit" type="submit"  value="Editar Producto">
                 </form>
-                <form class="formCompra" action="/admin/borrar-producto/<%= lista.referencia %>?_method=delete" method="POST">
+                <form class="formCompra" action="/admin/eliminar/<%= lista.id %>?_method=delete" method="POST">
                     <input  class="delete" type="submit"  value="Borrar Producto">
                 </form>
             </div>

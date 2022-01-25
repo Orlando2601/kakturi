@@ -1,24 +1,23 @@
 [
-    {
-        "id":1,
-        "titulo":"Fimo",
-        "descripcion":"Sarta aros de fimo, colores variados. Diseña portagafas, collares, shoker y más.",
-        "precio":"1000",
-        "img":"rodio.png"
-    },
-    {
-        "id":2,
-        "titulo":"Fimo",
-        "descripcion":"Sarta aros de fimo, colores variados. Diseña portagafas, collares, shoker y más.",
-        "precio":"1000",
-        "img":"rodio.png"
-    },
-    {
-        "id":3,
-        "titulo":"Fimo",
-        "descripcion":"Sarta aros de fimo, colores variados. Diseña portagafas, collares, shoker y más.",
-        "precio":"1000",
-        "img":"rodio.png"
-    }
-    
+ {
+  "id": "1",
+  "titulo": "loco",
+  "descripcion": "hoja",
+  "precio": "5500",
+  "imagen": "imagen1643077718801.jpg"
+ },
+ {
+  "id": "2",
+  "titulo": "nuevo ",
+  "descripcion": "edicion",
+  "precio": "5500",
+  "imagen": "imagen1643077594134.jpg"
+ },
+ {
+  "id": 3,
+  "titulo": "loco",
+  "descripcion": "hoja",
+  "precio": "5500",
+  "imagen": "imagen1643077596152.jpg"
+ }
 ]

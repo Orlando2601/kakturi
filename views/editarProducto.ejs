@@ -11,23 +11,22 @@
 <body>
     <%- include ('./partials/header') %>
     <main class="mainCrearProducto">
-        <div class="iconoStock">
-            <i class="fas fa-cubes"></i>
-        </div>
+        <section class="imagen-edit">
+            <img src="/images/dbProductos/<%= toEdit.imagen %>" alt="">
+        </section>
         <h1>Complete los datos del nuevo producto</h1>
-        <form action="/admin/nuevo" method="POST"  enctype="multipart/form-data" > <!-- enctype="multipart/form-data"> --> <!-- Usar esta config cuando se va a subir imagenes en el form sino se puede quitar el elemento o configurar  enctype="application/x-www-form-urlencoded"  para solo texto -->
-            
+        <form action="/admin/editar/<%= toEdit.id %>?_method=patch" method="POST" enctype="multipart/form-data" > <!-- enctype="multipart/form-data"> --> <!-- Usar esta config cuando se va a subir imagenes en el form sino se puede quitar el elemento o configurar  enctype="application/x-www-form-urlencoded"  para solo texto -->            
             <div>
                 <label for="titulo">Nombre</label>
-                <input type="text" id="titulo" name="titulo"  placeholder="Ingrese nombre de producto" >
+                <input type="text" id="titulo" name="titulo"  value="<%= toEdit.titulo %>"  >
             </div>
             <div>
                 <label for="descripcion">Descripción</label>
-                <input type="text" id="descripcion" name="descripcion"  placeholder="Ingrese descripcion de producto" >
+                <input type="text" id="descripcion" name="descripcion"  value="<%= toEdit.descripcion %>"  >
             </div>
             <div>
                 <label for="precio">Precio</label>
-                <input type="text" id="precio" name="precio" placeholder="Ingrese cantidad disponible" >
+                <input type="text" id="precio" name="precio" value="<%= toEdit.precio %>"  >
             </div>
             <div>
                 <label for="imagen">Imagen de descripción</label>
