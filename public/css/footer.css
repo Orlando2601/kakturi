@@ -9,7 +9,7 @@ footer {
     height:100%
 }
 footer h4 {
-    font-family: var(--Dongle-font);
+    font-family: var(--fuente);
     font-size: var(--title-md);
     color: #3E6B1C
 }

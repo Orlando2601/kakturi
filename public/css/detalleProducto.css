@@ -15,7 +15,7 @@
 .detalleProducto .descripcionDetalle {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     border-left: 1px solid #7ca04f;
     padding-left: 10px;
@@ -30,12 +30,12 @@
     
 }
 .detalleProducto .descripcionDetalle .formCompra label, h2{
-font-family: var(--Dongle-font);
+font-family: var(--fuente);
 font-size: var(--text-lg);
     
 }
 .detalleProducto .descripcionDetalle .formCompra label, h3{
-    font-family: var(--Dongle-font);
+    font-family: var(--fuente);
     font-size: var(--text-lg);
         
     }
@@ -55,21 +55,21 @@ font-size: var(--text-lg);
     
     background-color: #7ca04f;
     padding: 3px;
-    font-family: var(--Dongle-font);
+    font-family: var(--fuente);
     font-size: var(--text-lg);
 }
 .detalleProducto .descripcionDetalle .formCompra .edit{
     
     background-color: orange;
     padding: 3px;
-    font-family: var(--Dongle-font);
+    font-family: var(--fuente);
     font-size: var(--text-lg);
 }
 .detalleProducto .descripcionDetalle .formCompra .delete{
     
     background-color: red;
     padding: 3px;
-    font-family: var(--Dongle-font);
+    font-family: var(--fuente);
     font-size: var(--text-lg);
 }
 .botones {

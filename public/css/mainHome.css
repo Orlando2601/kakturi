@@ -23,12 +23,12 @@
 
 /* ESTILOS DE TEXTO */
 .mainHome .descripcionSeccion p{
-    font-family: var(--Dongle-font);
+    font-family: var(--fuente);
     font-size: var(--text-md);
     line-height:0.7em;
 }
 .mainHome .descripcionSeccion h2{
-    font-family: var(--Dongle-font);
+    font-family: var(--fuente);
     font-size: var(--text-lg);
     font-weight: 400;
     text-anchor: start;

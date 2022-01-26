@@ -52,11 +52,14 @@ header .div-btn-header .a-btn-header{
 }/* Eenlaces navegación */
 
 header .header-right .redes .iconred i{
-    font-size: 2.5em;
+    font-size: var( --iconos);
 }/* Tamaño iconos */
-/* MAIN */
 
+header .header-right .caja-enlace-header .iconred a i {
 
+    font-size: var( --iconos);
+}
+/* RESPONSIVE */
 @media (max-width: 599px) {
     /* HEADER */
     header{
@@ -81,15 +84,12 @@ header .header-right .redes .iconred i{
         width: 30%;
     }
     header .header-right .caja-enlace-header a{
-        font-family: var(--Dongle-font);
-        font-size: var( --text-sm);
+        font-family: var(--fuente);
+        font-size: var(--h1);
     }
 
     
-    header .header-right .caja-enlace-header .iconred a i {
-    
-        font-size: var( --text-sm);
-    }
+
 
 }
 
@@ -113,6 +113,10 @@ header .header-right .redes .iconred i{
         display: flex;
         justify-content: space-evenly;
     } 
+    header .header-right .caja-enlace-header a{
+        font-family: var(--fuente);
+        font-size:var(--h1);
+    }
 
 }
 
@@ -127,16 +131,12 @@ header .header-right .redes .iconred i{
     header .caja-logo{
         width: 40%;
     }
- 
-
-}
-
-/* PROPIEDADES TEXTOS HEADER */
+ /* PROPIEDADES TEXTOS HEADER */
 header .header-right .caja-enlace-header a{
-    font-family: var(--Dongle-font);
-    font-size: var( --text-md);
+    font-family: var(--fuente);
+    font-size:var(--h1);
 }
-header .header-right .caja-enlace-header .iconred a i {
 
-    font-size: var( --text-sm);
 }
+
+
