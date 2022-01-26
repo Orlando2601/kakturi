@@ -30,3 +30,8 @@ Se creo un nuevo producto en la pagina /registro el dia Tue Jan 25 2022 11:18:14
 Se creo un nuevo producto en la pagina /registro el dia Tue Jan 25 2022 11:18:20 GMT-0500 (hora estándar de Colombia) 
 Se creo un nuevo producto en la pagina /registro el dia Tue Jan 25 2022 11:18:30 GMT-0500 (hora estándar de Colombia) 
 Se creo un nuevo producto en la pagina /registro el dia Tue Jan 25 2022 11:18:35 GMT-0500 (hora estándar de Colombia) 
+Se creo un nuevo producto en la pagina /registro el dia Tue Jan 25 2022 18:37:31 GMT-0500 (hora estándar de Colombia) 
+Se creo un nuevo producto en la pagina /registro el dia Tue Jan 25 2022 19:25:55 GMT-0500 (hora estándar de Colombia) 
+Se creo un nuevo producto en la pagina /registro el dia Tue Jan 25 2022 19:26:52 GMT-0500 (hora estándar de Colombia) 
+Se creo un nuevo producto en la pagina /registro el dia Tue Jan 25 2022 19:27:46 GMT-0500 (hora estándar de Colombia) 
+Se creo un nuevo producto en la pagina /registro el dia Tue Jan 25 2022 19:32:04 GMT-0500 (hora estándar de Colombia) 

@@ -27,12 +27,17 @@ const userController = {
             fs.writeFileSync(usersFilePath, JSON.stringify(usuarios, null, ' '))
             res.redirect('/') 
         }else{
+            console.log(errors)
             res.render('registro',{
+                
                 errors: errors.array(),
                 old: req.body
             })
         }
 
+    },
+    admin:(req, res)=>{
+        res.send('hola admin' + req.query.user)
     }
 }
 
