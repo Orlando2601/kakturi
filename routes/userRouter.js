@@ -15,7 +15,7 @@ const validaciones = [
     body('nombre').notEmpty().withMessage('Debes ingresar tu nombre'),
     body('apellido').notEmpty().withMessage('Debes ingresar tu apellido'),
     body('correo').notEmpty().withMessage('Debes ingresar un correo valido'),
-    body('contraseña').notEmpty().withMessage('Debes ingresar una passwaord')
+    body('contraseña').notEmpty().withMessage('Debes ingresar una contrasenia')
 ];
 
 
