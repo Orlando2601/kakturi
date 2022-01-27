@@ -9,13 +9,20 @@ const userController = {
     login: (req,res)=>{
         res.render('login')
     },
+    userLog:(req,res)=>{
+        const errors = validationResult(req);
+        if(errors.isEmpty()){
+
+        }else{
+            res.render('login', {errors:errors.array()})
+        }
+    },
     registro: (req, res)=>{
 
         res.render('registro')
     },
     storeUser: (req, res)=>{
         const errors = validationResult(req)
-        console.log(errors)
         if(errors.isEmpty()){
             
             let newReference = usuarios.length
