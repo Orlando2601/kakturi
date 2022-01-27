@@ -96,5 +96,19 @@
   "apellido": " aaa",
   "correo": "aaa@gmail.com",
   "contraseña": "qqqq"
+ },
+ {
+  "id": 15,
+  "nombre": " oswar",
+  "apellido": "baez",
+  "correo": "oswar.baez26@gmail.com",
+  "contraseña": "123456789"
+ },
+ {
+  "id": 16,
+  "nombre": " ",
+  "apellido": " baez",
+  "correo": "oswar.baez26@gmail.com",
+  "contraseña": "1234"
  }
 ]

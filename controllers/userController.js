@@ -15,6 +15,7 @@ const userController = {
     },
     storeUser: (req, res)=>{
         const errors = validationResult(req)
+        console.log(errors)
         if(errors.isEmpty()){
             
             let newReference = usuarios.length
@@ -27,7 +28,7 @@ const userController = {
             fs.writeFileSync(usersFilePath, JSON.stringify(usuarios, null, ' '))
             res.redirect('/') 
         }else{
-            console.log(errors)
+            
             res.render('registro',{
                 
                 errors: errors.array(),
