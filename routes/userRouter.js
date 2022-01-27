@@ -13,10 +13,13 @@ const validaciones = [
     body('correo').notEmpty().withMessage('Debes ingresar un correo valido'),
     body('contraseña').notEmpty().withMessage('Debes ingresar una contrasenia')
 ];
-
+const validacionesLog = [
+    body('correo').notEmpty().withMessage('Debes ingresar un correo valido'),
+    body('contraseña').notEmpty().withMessage('Debes ingresar una contrasenia')
+];
 
 router.get('/login',userController.login);
-router.post('/login',validaciones, userController.userLog )
+router.post('/login',validacionesLog, userController.userLog )
 
 
 /* router.get('/admin',admin,  userController.admin) *//* ruta prueba de middleware */

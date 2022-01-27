@@ -2,17 +2,17 @@ const express = require('express');/* Importare modulo express */
 const path = require('path');/* Importar moduylo path para las direcciones */
 
 const publicPath = path.resolve(__dirname, './public');/* Definir la carpeta public como pública para archivos estáticos */
-
+const session = require('express-session')
 const productsRouter = require('./routes/productsRouter');/* requerimos archivo de rutas */
 const userRouter = require('./routes/userRouter');
 const adminRouter = require('./routes/adminRouter');
-
+const bcrytp = require('bcrypt')
 const methodOverride = require('method-override')
 const logMiddleware = require('./middlewares/logMiddleware')
 
 
 const app = express();/* Asignar express a una variable */
-
+app.use(session({secret:'secreto oswar'}))
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride('_method'));
