@@ -14,17 +14,15 @@
         <div class="iconoUser">
             <i class="far fa-user"></i>
         </div>
+
         <% if (locals.errors){ errors.forEach(error => { %>
 
-        <% })} %>
-       
+            <p class="showError"></p>
+            <% })} %>
         <form action="/user/registro" method="POST">
 
             <label for="nombre">Ingrese nombre</label>
             <input type="text" name="nombre" id="nombre"  value="<%= locals.old && old.nombre ? old.nombre : ' ' %>">
-            <% if (locals.errors){ errors.forEach(error => { %>
-
-            <p class="showError"></p>
 
             <label for="apellido">Ingrese apellido</label>
             <input type="text" name="apellido" id="apellido" value="<%= locals.old && old.apellido ? old.apellido : ' ' %>">
