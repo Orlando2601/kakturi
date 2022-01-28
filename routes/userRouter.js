@@ -28,27 +28,8 @@ router.get('/login',guestMiddleware,userController.login);
 router.post('/login',validacionesLog, userController.userLog );
 router.get('/adminPerfil', notLogMiddleware, userController.adminPerfil);
 router.get('/cerrarSesion', userController.cerrarSesion);
-/* ///////////////////////////////////////////////////////////////////////////////////////// */
-
-
-
-
-
-
-
-
-
-
-
-/* ///////////////////// */
-
-
-
-
 router.get('/registro', guestMiddleware, userController.registro)
-/* router.post('/registro', validaciones, logDBMiddleware,  userController.storeUser)
- */
 router.post('/registro', validaciones,  userController.storeUser)
-
+/* ///////////////////////////////////////////////////////////////////////////////////////// */
 
 module.exports = router;
