@@ -1,10 +1,11 @@
+/* IMPORTACION DE MODULOS //////////////////////////////////////////////////////////////*/
 const req = require('express/lib/request');
 const fs = require('fs');
 const path = require('path')
 const productsFilePath = path.join(__dirname, '../dataBase/dbProductos.json');
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
-
+/* /////////////////////////////////////////////////////////////////////////////////// */
+/* CONTROLADOR DE LA RUTA PRODUCTS ///////////////////////////////////////////////////////*/
 const productsControllers ={
         products: (req,res)=>{
             res.render('products',{lista: productos})
@@ -21,7 +22,5 @@ const productsControllers ={
             res.render('prueba')
         },
 }
-
-
-
+/* /////////////////////////////////////////////////////////////////////////////////// */
 module.exports = productsControllers;

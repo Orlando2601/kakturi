@@ -9,7 +9,7 @@
     <title>Detalle producto</title>
 </head>
 <body>
-    <%-include ('./partials/header') %>
+    <%-include ('./partials/header') %> <!-- importando header -->
     <main class="detalleProducto">
         <section class="imagenDetalle">
             <img src="/images/dbProductos/<%= lista.imagen %>" alt="">
@@ -35,20 +35,20 @@
                    </select>           
                 </div>
                    <input type="submit" name="comprar" value="Añadir Carrito">
-            </form>
+            </form> <!-- formulario de aceptacion de compra -->
             <div class="botones">
                 <form class="formCompra"  action="/admin/editar/<%= lista.id %>">
                     <input class="edit" type="submit"  value="Editar Producto">
-                </form>
+                </form> <!-- control de button para editar producto-->
                 <form class="formCompra" action="/admin/eliminar/<%= lista.id %>?_method=delete" method="POST">
                     <input  class="delete" type="submit"  value="Borrar Producto">
-                </form>
+                </form><!-- control de button para eliminar producto -->
             </div>
             
            
         </section>
         
     </main>
-    <%-include ('./partials/footer') %>
+    <%-include ('./partials/footer') %> <!-- importando footer -->
 </body>
 </html>

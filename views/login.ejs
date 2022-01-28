@@ -9,27 +9,36 @@
     <title>Home</title>
 </head>
 <body>
-    <%- include ('./partials/header') %>
+    <%- include ('./partials/header') %> <!-- importando header -->
     <main class="registro">
-        <!-- imagen de sin foto -->
+    
         <div class="iconoUser">
             <i class="far fa-user"></i>
-        </div>
-        <!-- formulario de login -->
+        </div> <!-- icono representativo de usuario -->
+        
         <form action="/user/login" method="POST">  
             <label for="correo">Ingrese Correo electrónico</label>
-            <input type="email" name="correo" placeholder="Correo">
+            <input type="email" name="correo" id="correo" placeholder="Correo">
+            <% if (locals.errors){let errorname = errors.find(error => error.param == 'correo')%>
+                <p class="showError"></p>!-- texto inferior de errores -->
+    
+            <%  } %> <!-- Este codigo me permite mostrar los errores deprueba  en la vista -->
             <label for="contraseña">Ingrese Contraseña</label>
-            <input type="password" name="contraseña" placeholder="Contraseña">
+            <input type="password" name="contraseña" id="contraseña" placeholder="Contraseña">
+            <% if (locals.errors){let errorname = errors.find(error => error.param == 'contraseña')%>
+            <p class="showError"></p><!-- texto inferior de errores -->
+
+        <%  } %> <!-- Este codigo me permite mostrar los errores deprueba  en la vista -->
+
             <div class="botones">
                 <input class="btn" type="submit" value="Ingresar">
                 <input class="btn" type="reset" value="Borrar">
-            </div>
-        </form>
+            </div> <!-- caja que contiene botones de ingresar o borrar -->
+        </form> <!-- formulario e login de usuario -->
         <label for="enlaceCreaUser">¿No tienes Cuenta?</label>
         <a href="/user/registro"><button class="btn" name="enlaceCreaUser">Crear Usuario</button></a>
             
     </main>
-    <%- include ('./partials/footer') %>
+    <%- include ('./partials/footer') %> <!-- importando footer -->
     </body>
 </html>

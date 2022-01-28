@@ -1,114 +1,37 @@
 [
  {
-  "id": "1",
+  "id": 1,
   "nombre": "oswar",
   "apellido": "baez",
   "correo": "oswar@gmail.com",
-  "password": "1234"
+  "contraseña": "1234"
  },
  {
   "id": 2,
-  "nombre": "oswar",
+  "nombre": "Oswar ",
   "apellido": "baez",
-  "correo": "oswar@gmail",
-  "contraseña": "1234"
+  "correo": "oswar.baez01@gmail.com",
+  "contraseña": "$2a$10$i.45.CRrxOHIK0dhkkDdw.oG9tr1lGXDhyA5aai4tZz3a5Wax/nLq"
  },
  {
   "id": 3,
-  "nombre": "Rodio",
-  "apellido": "qqqq",
-  "correo": "jhecbje@hotmail",
-  "contraseña": "000000000"
+  "nombre": "vanessa",
+  "apellido": "barrioz",
+  "correo": "vpbd9106@hotmail.com",
+  "contraseña": "$2a$10$RAvsWB8iOQhg5MQNfsaSdes2ba.Lgx0oglb1tULF9yoadfLGVCZge"
  },
  {
   "id": 4,
-  "nombre": "Rodio",
+  "nombre": "nuevo",
   "apellido": "baez",
-  "correo": "oswar@gmail",
-  "contraseña": "1234"
+  "correo": "7@aaa",
+  "contraseña": "$2a$10$JpzoCNe5Uf4mKh0taLryGOEPux6MNi8iXQV4yqV6Hc8m8rop8cJWS"
  },
  {
   "id": 5,
-  "nombre": "oswar",
-  "apellido": "corredor",
-  "correo": "OSWAR@HOTMAIL.OM",
-  "contraseña": "1234567754"
- },
- {
-  "id": 6,
-  "nombre": "",
-  "apellido": "",
-  "correo": "",
-  "contraseña": ""
- },
- {
-  "id": 7,
-  "nombre": "",
-  "apellido": "",
-  "correo": "",
-  "contraseña": ""
- },
- {
-  "id": 8,
-  "nombre": "",
-  "apellido": "",
-  "correo": "",
-  "contraseña": ""
- },
- {
-  "id": 9,
-  "nombre": "aaaa",
-  "apellido": "",
-  "correo": "",
-  "contraseña": ""
- },
- {
-  "id": 10,
-  "nombre": "",
-  "apellido": "",
-  "correo": "",
-  "contraseña": ""
- },
- {
-  "id": 11,
-  "nombre": "",
-  "apellido": "",
-  "correo": "",
-  "contraseña": ""
- },
- {
-  "id": 12,
-  "nombre": "Rodio",
-  "apellido": "baez",
-  "correo": "oswar@gmail",
-  "contraseña": "ssesss"
- },
- {
-  "id": 13,
-  "nombre": "Rodio",
-  "apellido": "baez",
-  "correo": "oswar@gmail",
-  "contraseña": "aaaa"
- },
- {
-  "id": 14,
-  "nombre": " oswar",
-  "apellido": " aaa",
-  "correo": "aaa@gmail.com",
-  "contraseña": "qqqq"
- },
- {
-  "id": 15,
-  "nombre": " oswar",
-  "apellido": "baez",
-  "correo": "oswar.baez26@gmail.com",
-  "contraseña": "123456789"
- },
- {
-  "id": 16,
-  "nombre": " ",
-  "apellido": " baez",
-  "correo": "oswar.baez26@gmail.com",
-  "contraseña": "1234"
+  "nombre": "Agueda",
+  "apellido": "Corredor",
+  "correo": "corredoragueda@gmail.com",
+  "contraseña": "$2a$10$pjb3gQww2uy7h.walKGhbOSHQpchBecAlTaK6/U1gjfrsLwXa34zG"
  }
 ]

@@ -9,24 +9,24 @@
     <title>Products</title>
 </head>
 <body>
-<%-include ('./partials/header') %>
+<%-include ('./partials/header') %> <!-- header importado -->
  <main class="mainProductos">
-    <% lista.forEach(item => { %>
+    <% lista.forEach(item => { %> <!-- codigo js para rcorrer el objeto enviado en el controlador -->
      <article>
          
-        <img src="/images/dbProductos/<%= item.imagen %>" alt="">
+        <img src="/images/dbProductos/<%= item.imagen %>" alt=""><!-- imagen del articulo -->
+
         <div class="vermas">
             <p class="titulo"><%= item.titulo %></p>
             <p class="precio">COP$<%= item.precio %></p>
             <a href="/detalleProducto/<%= item.id %>"> Detalles </a>
             
-        </div>
+        </div><!-- Caja desplegable de cada articulo, par aver descripcion rapida -->
         
-     </article>
-     <% }); %>
+     </article><!-- vista de cada articulo -->
+     <% }); %><!-- cierre codigo js anterior -->
     
 
  </main>
- <%-include ('./partials/footer') %>
-</body>
+ <%-include ('./partials/footer') %> <!-- footer importado -->
 </html>

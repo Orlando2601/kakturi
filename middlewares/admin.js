@@ -7,7 +7,7 @@ function admin(req, res, next){
             user == admin ? next(): res.send('no esta')
         })
     }
-}
+} /* modulo prueba profe */
 module.exports = admin
 /* middleware de prueba para la clase donde a traves de los req.querys requerimos un dato y lo comparamos con los usuarios ya almacenados en el array definido anteiormente
  */

@@ -1,10 +1,11 @@
+/* IMPORTACION DE MODULOS //////////////////////////////////////////////////////////////*/
 const req = require('express/lib/request');
 const fs = require('fs');
 const path = require('path')
 const productsFilePath = path.join(__dirname, '../dataBase/dbProductos.json');
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
-
+/* /////////////////////////////////////////////////////////////////////////////////// */
+/* CONTROLADOR DE LA RUTA ADMIN ///////////////////////////////////////////////////////*/
 const adminControllers ={
     nuevo:(req,res)=>{
         res.render('nuevoProducto')
@@ -67,7 +68,7 @@ const adminControllers ={
         }
     }
 }
-
+/* //////////////////////////////////////////////////////////////////////////////// */
 
 
 module.exports = adminControllers;
