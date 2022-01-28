@@ -9,7 +9,7 @@
     <title>Home</title>
 </head>
 <body>
-    <%- include ('./partials/header') %>
+    <%- include ('./partials/header') %> <!-- importando header -->
     <main class="mainCrearProducto">
         <section class="imagen-edit">
             <img src="/images/dbProductos/<%= toEdit.imagen %>" alt="">
@@ -31,15 +31,12 @@
             <div>
                 <label for="imagen">Imagen de descripción</label>
                 <input type="file" id="imagen" name="imagen" placeholder="Ingrese imagen de referencia" >
-            </div>
+            </div><!-- caja de carga de archivos -->
             <div >
                 <input type="submit" value="Guardar">
-            </div>
-
-            
-            
-        </form>
+            </div> <!-- caja botones -->
+        </form><!-- formulario de edicion de productos -->
     </main>
-    <%- include ('./partials/footer') %>
+    <%- include ('./partials/footer') %> <!-- importando footer -->
     </body>
 </html>

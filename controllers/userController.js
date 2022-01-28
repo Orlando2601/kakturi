@@ -1,10 +1,12 @@
+/* IMPORTACION DE MODULOS //////////////////////////////////////////////////////////////*/
 const fs = require('fs');
 const path = require('path')
 const usersFilePath = path.join(__dirname, '../dataBase/dbUsers.json');
 const usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const { validationResult } = require('express-validator')
 const bcryptjs = require('bcryptjs')
-
+/* /////////////////////////////////////////////////////////////////////////////////// */
+/* CONTROLADOR DE LA RUTA USER ///////////////////////////////////////////////////////*/
 const userController = {
     login: (req,res)=>{
         res.render('login')
@@ -22,21 +24,16 @@ const userController = {
                        delete usuarioAloguearse.contraseña
 
                         
-                    }
-                   
+                    }                   
                 }
-                
             }
             if(usuarioAloguearse == undefined){
                 console.log('No existe usuario')
-                res.render('login')
-                
+                res.render('login')                
             }
             req.session.usuarioLogueado = usuarioAloguearse;
             console.log('Datos de usuario', req.session)
-            res.render('adminPerfil', {
-                user: req.session.usuarioLogueado
-            })
+            res.redirect('/user/adminPerfil')
         }else{
             console.log(errors)
             res.render('login', {errors:errors.errors})
@@ -83,10 +80,17 @@ const userController = {
         res.send('hola admin' + req.query.user)
     },
     adminPerfil:(req,res)=>{
-        res.redirect('/user/adminPerfil')
+        res.render('adminPerfil',{
+            user: req.session.usuarioLogueado
+        })
 
         
+    },
+    cerrarSesion: (req,res)=>{
+        req.session.destroy();
+        console.log(req.session)
+        res.redirect('/')
     }
 }
-
+/* ////////////////////////////////////////////////////////////////////// */
 module.exports  = userController

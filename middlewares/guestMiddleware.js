@@ -6,6 +6,6 @@ function guestMiddleware (req, res,next){
 
     }
     next()
-}
+}/* middleware usado para redireccionar a adminPerfil cada vez que se acceda a traves de la ruta login  */
 
 module.exports = guestMiddleware

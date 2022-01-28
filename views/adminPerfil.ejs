@@ -9,10 +9,11 @@
         <title>Detalle producto</title>
     </head>
 <body>
-    <%-include ('./partials/header') %>
+    <%-include ('./partials/header') %> <!-- importando header -->
     <main>
         <h1>HOLA <%= user.nombre %></h1>
+        <button> <a href="/user/cerrarSesion">Logout</a> </button> <!-- button de cerrar sesion -->
     </main>
-    <%-include ('./partials/footer') %>
+    <%-include ('./partials/footer') %> <!-- importando footer -->
 </body>
 </html>

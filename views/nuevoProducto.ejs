@@ -9,11 +9,11 @@
     <title>Home</title>
 </head>
 <body>
-    <%- include ('./partials/header') %>
+    <%- include ('./partials/header') %> <!-- importando header -->
     <main class="mainCrearProducto">
         <div class="iconoStock">
             <i class="fas fa-cubes"></i>
-        </div>
+        </div><!-- icono superior de la vista -->
         <h1>Complete los datos del nuevo producto</h1>
         <form action="/admin/nuevo" method="POST"  enctype="multipart/form-data" > <!-- enctype="multipart/form-data"> --> <!-- Usar esta config cuando se va a subir imagenes en el form sino se puede quitar el elemento o configurar  enctype="application/x-www-form-urlencoded"  para solo texto -->
             
@@ -35,12 +35,9 @@
             </div>
             <div >
                 <input type="submit" value="Guardar">
-            </div>
-
-            
-            
-        </form>
+            </div><!-- caja que contiene el boton de guardar -->
+        </form><!-- formulario de registro del nuevo producto -->
     </main>
-    <%- include ('./partials/footer') %>
+    <%- include ('./partials/footer') %> <!-- importando footer -->
     </body>
 </html>

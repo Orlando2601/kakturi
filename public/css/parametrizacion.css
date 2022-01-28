@@ -4,11 +4,6 @@
     box-sizing: border-box; /*con esta propiedad definimos que el margin y el padding sean incluidos dentro del tamaño de las cajas*/
 } /* Propiedades generales de Cajas */
 
-
-/* html{
-    font-size: 62.5%;
-} *//* Escalar tamaño de fuente de html para el uso de rem */
-
 :root{
     --gris-oscuro: #666;
     --gris-claro: #ebebeb;
@@ -28,8 +23,6 @@
     --h1:1.5rem;
     --iconos:1.5rem;
     --h2:3vw;
-
-
     /*Fuentes descargadas de web*/
     --fuente: 'Open Sans Condensed', sans-serif;
     
