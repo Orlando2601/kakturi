@@ -1,37 +1,15 @@
 [
  {
   "id": 1,
-  "nombre": "oswar",
-  "apellido": "baez",
-  "correo": "oswar@gmail.com",
-  "contraseña": "1234"
+  "nombre": "Oswar",
+  "apellido": "Baez",
+  "correo": "oswar.baez26@gmail.com"
  },
  {
   "id": 2,
-  "nombre": "Oswar ",
-  "apellido": "baez",
-  "correo": "oswar.baez01@gmail.com",
-  "contraseña": "$2a$10$i.45.CRrxOHIK0dhkkDdw.oG9tr1lGXDhyA5aai4tZz3a5Wax/nLq"
- },
- {
-  "id": 3,
-  "nombre": "vanessa",
-  "apellido": "barrioz",
-  "correo": "vpbd9106@hotmail.com",
-  "contraseña": "$2a$10$RAvsWB8iOQhg5MQNfsaSdes2ba.Lgx0oglb1tULF9yoadfLGVCZge"
- },
- {
-  "id": 4,
-  "nombre": "nuevo",
-  "apellido": "baez",
-  "correo": "7@aaa",
-  "contraseña": "$2a$10$JpzoCNe5Uf4mKh0taLryGOEPux6MNi8iXQV4yqV6Hc8m8rop8cJWS"
- },
- {
-  "id": 5,
-  "nombre": "Agueda",
-  "apellido": "Corredor",
-  "correo": "corredoragueda@gmail.com",
-  "contraseña": "$2a$10$pjb3gQww2uy7h.walKGhbOSHQpchBecAlTaK6/U1gjfrsLwXa34zG"
+  "nombre": "admin",
+  "apellido": "admin",
+  "correo": "admin@gmail.com",
+  "contraseña": "$2a$10$c64zpsXgIhttN7jcHbxjluY1I9pvYOam0lyATY2sAzra0vubNAD2u"
  }
 ]

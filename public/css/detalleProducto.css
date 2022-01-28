@@ -72,7 +72,3 @@ font-size: var(--text-lg);
     font-family: var(--fuente);
     font-size: var(--text-lg);
 }
-.botones {
-    display: flex;
-    flex-direction: column;
-}

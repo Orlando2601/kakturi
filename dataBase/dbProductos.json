@@ -1,16 +1,9 @@
 [
  {
-  "id": "1",
+  "id": 1,
   "titulo": "Hoja Acero",
   "descripcion": "Dije tipo centro para manillas",
   "precio": "8000",
   "imagen": "imagen1643227001945.png"
- },
- {
-  "id": 2,
-  "titulo": "nuevo",
-  "descripcion": "sss",
-  "precio": "355",
-  "imagen": "imagen1643308167545.jpg"
  }
 ]
