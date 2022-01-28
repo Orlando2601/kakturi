@@ -8,23 +8,30 @@
  },
  {
   "id": 2,
-  "nombre": "oswar",
+  "nombre": "Oswar ",
   "apellido": "baez",
-  "correo": "oswar@gmail",
-  "contraseña": "1234"
+  "correo": "oswar.baez01@gmail.com",
+  "contraseña": "$2a$10$i.45.CRrxOHIK0dhkkDdw.oG9tr1lGXDhyA5aai4tZz3a5Wax/nLq"
  },
  {
   "id": 3,
-  "nombre": "Rodio",
-  "apellido": "qqqq",
-  "correo": "jhecbje@hotmail",
-  "contraseña": "000000000"
+  "nombre": "vanessa",
+  "apellido": "barrioz",
+  "correo": "vpbd9106@hotmail.com",
+  "contraseña": "$2a$10$RAvsWB8iOQhg5MQNfsaSdes2ba.Lgx0oglb1tULF9yoadfLGVCZge"
  },
  {
   "id": 4,
-  "nombre": "OSWAR",
-  "apellido": "BAEZ",
-  "correo": "oobc26@hotmail.com",
-  "contraseña": "$2a$10$A9UaWv/MfznQ/G3bjQ.r1ucAvHZFGUmKjMAJrsJLm/DMO.f8Y19.q"
+  "nombre": "nuevo",
+  "apellido": "baez",
+  "correo": "7@aaa",
+  "contraseña": "$2a$10$JpzoCNe5Uf4mKh0taLryGOEPux6MNi8iXQV4yqV6Hc8m8rop8cJWS"
+ },
+ {
+  "id": 5,
+  "nombre": "Agueda",
+  "apellido": "Corredor",
+  "correo": "corredoragueda@gmail.com",
+  "contraseña": "$2a$10$pjb3gQww2uy7h.walKGhbOSHQpchBecAlTaK6/U1gjfrsLwXa34zG"
  }
 ]

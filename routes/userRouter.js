@@ -4,6 +4,7 @@ const userController = require('../controllers/userController');
 const logDBMiddleware = require('../middlewares/lodDBMiddleware')
 const { body } = require('express-validator');
 const logMiddleware = require('../middlewares/logMiddleware');
+const guestMiddleware = require('../middlewares/guestMiddleware')
 /* const admin = require('../middlewares/admin') */ /* require del middleware */
 
 /* VALIDACIONES DE CAMPOS */
@@ -18,8 +19,9 @@ const validacionesLog = [
     body('contraseña').notEmpty().withMessage('Debes ingresar una contrasenia')
 ];
 
-router.get('/login',userController.login);
+router.get('/login',guestMiddleware,userController.login);
 router.post('/login',validacionesLog, userController.userLog )
+router.get('/adminPerfil', userController.adminPerfil)
 
 
 /* router.get('/admin',admin,  userController.admin) *//* ruta prueba de middleware */
@@ -36,7 +38,7 @@ router.post('/login',validacionesLog, userController.userLog )
 
 
 
-router.get('/registro', userController.registro)
+router.get('/registro', guestMiddleware, userController.registro)
 /* router.post('/registro', validaciones, logDBMiddleware,  userController.storeUser)
  */
 router.post('/registro', validaciones,  userController.storeUser)
