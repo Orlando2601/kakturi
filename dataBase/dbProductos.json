@@ -1,9 +1,30 @@
 [
  {
   "id": 1,
-  "titulo": "Hoja Acero",
-  "descripcion": "Dije tipo centro para manillas",
-  "precio": "8000",
-  "imagen": "imagen1643227001945.png"
+  "titulo": "ROdio",
+  "descripcion": "aaaa",
+  "precio": "35000",
+  "colores": [
+   "black",
+   "green",
+   "yellow",
+   "blue"
+  ],
+  "imagen": "imagen1643480526354.jpg"
+ },
+ {
+  "id": 2,
+  "titulo": "k,frk",
+  "descripcion": "n kv",
+  "precio": "vrgvrg",
+  "colores": [
+   "yellow",
+   "pink",
+   "purple",
+   "blue",
+   "brown",
+   "gray"
+  ],
+  "imagen": "imagen1643490250337.jpg"
  }
 ]
