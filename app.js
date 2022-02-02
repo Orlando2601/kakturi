@@ -1,7 +1,7 @@
 /* REQUERIMIENTO DE MODULOS ///////////////////////////////////////////////////////////////////////////// */
 const express = require('express');
 const path = require('path');
-const publicPath = path.resolve(__dirname, './public');
+const publicPath = path.resolve(__dirname, './src/public');
 
 const session = require('express-session')
 const cookies = require('cookie-parser')
@@ -27,7 +27,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride('_method'));
 /* /////////////////////////////////////////////////////////////////////////////////////////////// */
-
+app.set('views', path.resolve(__dirname, './src/views'))
 app.use(express.static(publicPath));/* Expresamos la variable que express debe usar para archivos estáticos */
 /* app.use(logMiddleware) */
 /* CONFIGURACION RENDERIZACION VISTAS //////////////////////////////////////////////////////////////*/
