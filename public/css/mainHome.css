@@ -34,5 +34,48 @@
     text-anchor: start;
 }
 
+.carrusel{
+width: 90%;
+max-width: 120em;
+padding: 2em;
+background-color: lightskyblue;
+overflow-x: hidden;
+}
+.carrusel .grande{
+    width: 200%;
+    background-color: orange;
+    display: flex;
+    flex-flow: row nowrap;
+    padding: 2em;
+    justify-content: space-between;
+    align-items: center;
 
+    transition: all .5s eas5e;
+    transform: translateX(0%);
+    }
+.carrusel .grande .img{
+width: calc(100%/2 - 2em);
+min-width: 10vh;
+background-color: lime;
+}
+.carrusel .puntos{
+    width: 100%;
+    background-color: red;
+    padding: 1em;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.carrusel .puntos .punto{
+    list-style: none;
+    width: 2em;
+    height: 2em;
+    background-color: blue;
+    margin: 1em;
+}
+.carrusel .puntos .punto.activo{
+  background-color: orange;
+}
 
