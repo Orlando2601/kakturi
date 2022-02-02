@@ -41,23 +41,19 @@ font-size: var(--text-lg);
     }
 .detalleProducto .descripcionDetalle .formCompra .listas{
     display: flex;
-    flex-direction: row;
+    flex-direction:row;
     gap: 5px;
     margin-top: 10px;
     align-items: center;
 }
-.detalleProducto .descripcionDetalle .formCompra .listas select{
+.detalleProducto .descripcionDetalle .formCompra .listas input{
 color: #7ca04f;
-font-size: var(--text-lg);
+width: 50px;
+height: 30px;
 }
 
-.detalleProducto .descripcionDetalle .formCompra input{
-    
-    background-color: #7ca04f;
-    padding: 3px;
-    font-family: var(--fuente);
-    font-size: var(--text-lg);
-}
+
+
 .detalleProducto .descripcionDetalle .formCompra .edit{
     
     background-color: orange;
@@ -72,7 +68,18 @@ font-size: var(--text-lg);
     font-family: var(--fuente);
     font-size: var(--text-lg);
 }
-.botones {
+
+#detalleColor {
+display: flex;
+flex-direction: column;
+
+}
+#listaColores{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    gap:5px
+}
+#listaColores a{
+width: 25px;
+height: 25px;
 }

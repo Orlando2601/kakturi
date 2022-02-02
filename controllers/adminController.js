@@ -12,12 +12,17 @@ const adminControllers ={
     },
     guardarNuevo:(req, res)=>{
         let newReference = productos.length;
+        let colores = req.body.colores
+        let arrayColor = (colores.replace(/ /g,'')).split(',')
+        console.log(arrayColor)
         
         if (req.file){
             let nuevo = {
                 id:newReference + 1,
                 ...req.body,
-                imagen: req.file.filename
+                imagen: req.file.filename,
+                colores: arrayColor
+
             }
             productos.push(nuevo)
 			fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '))

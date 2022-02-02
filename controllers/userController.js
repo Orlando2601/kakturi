@@ -3,6 +3,9 @@ const fs = require('fs');
 const path = require('path')
 const usersFilePath = path.join(__dirname, '../dataBase/dbUsers.json');
 const usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+const productsFilePath = path.join(__dirname, '../dataBase/dbProductos.json');
+const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+
 const { validationResult } = require('express-validator')
 const bcryptjs = require('bcryptjs')
 /* /////////////////////////////////////////////////////////////////////////////////// */
@@ -21,9 +24,7 @@ const userController = {
                     if(bcryptjs.compareSync(req.body.contraseña, usuarios[i].contraseña)){
                        
                        usuarioAloguearse = usuarios[i];
-                       delete usuarioAloguearse.contraseña
-
-                        
+                       delete usuarioAloguearse.contraseña  
                     }                   
                 }
             }
@@ -80,8 +81,10 @@ const userController = {
         res.send('hola admin' + req.query.user)
     },
     adminPerfil:(req,res)=>{
+        
         res.render('adminPerfil',{
-            user: req.session.usuarioLogueado
+            user: req.session.usuarioLogueado,
+            lista: productos
         })
 
         

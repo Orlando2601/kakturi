@@ -16,6 +16,7 @@ const productsControllers ={
         detalle: (req,res)=>{
             let id = req.params.id;
             let lista = productos.find(elemento => elemento.id == id);
+            
             res.render('detalleProducto', {lista})
         },
         prueba: (req,res)=>{

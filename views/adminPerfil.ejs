@@ -10,8 +10,35 @@
     </head>
 <body>
     <%-include ('./partials/header') %> <!-- importando header -->
-    <main>
-        <h1>HOLA <%= user.nombre %></h1>
+    <main class="mainAdminPerfil">
+        <div class="infoUser">
+            <h1>Bienvenido a este espacio administrador de productos <%= user.nombre %></h1>
+        </div>
+        <div class="articulo">
+            <% lista.forEach(item => { %> <!-- codigo js para rcorrer el objeto enviado en el controlador -->
+            <article>
+                <div class="divImg">
+                    <img src="/images/dbProductos/<%= item.imagen %>" alt=""><!-- imagen del articulo -->
+
+                </div>
+       
+               <div class="vermas">
+                   <p class="titulo"><%= item.titulo %></p>
+                   <p class="precio">COP$<%= item.precio %></p>
+                   <div class="botones">
+                    <form class="formCompra"  action="/admin/editar/<%= item.id %>">
+                        <input class="edit" type="submit"  value="Editar Producto">
+                    </form> <!-- control de button para editar producto-->
+                    <form class="formCompra" action="/admin/eliminar/<%= item.id %>?_method=delete" method="POST">
+                        <input  class="delete" type="submit"  value="Borrar Producto">
+                    </form><!-- control de button para eliminar producto -->
+                </div>
+               </div><!-- Caja desplegable de cada articulo, par aver descripcion rapida -->
+               
+            </article><!-- vista de cada articulo -->
+            <% }); %><!-- cierre codigo js anterior -->
+        </div>
+        
         <button> <a href="/user/cerrarSesion">Logout</a> </button> <!-- button de cerrar sesion -->
     </main>
     <%-include ('./partials/footer') %> <!-- importando footer -->

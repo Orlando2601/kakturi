@@ -43,5 +43,4 @@ app.use(productsRouter); /* Definimos a express donde buscar las rutas */
 app.use('/user',userRouter)
 app.use('/admin',adminRouter)
 /* ///////////////////////////////////////////////////////////////////////////////////////////// */
-
 module.exports = app;
