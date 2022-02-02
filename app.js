@@ -2,13 +2,14 @@
 const express = require('express');
 const path = require('path');
 const publicPath = path.resolve(__dirname, './public');
+
 const session = require('express-session')
 const cookies = require('cookie-parser')
-const productsRouter = require('./routes/productsRouter');
-const userRouter = require('./routes/userRouter');
-const adminRouter = require('./routes/adminRouter');
+const productsRouter = require('./src/routes/productsRouter');
+const userRouter = require('./src/routes/userRouter');
+const adminRouter = require('./src/routes/adminRouter');
 const methodOverride = require('method-override')
-const logMiddleware = require('./middlewares/logMiddleware')
+const logMiddleware = require('./src/middlewares/logMiddleware')
 const app = express();/* Asignar express a una variable */
 /* /////////////////////////////////////////////////////////////////////////////////// */
 
@@ -28,7 +29,7 @@ app.use(methodOverride('_method'));
 /* /////////////////////////////////////////////////////////////////////////////////////////////// */
 
 app.use(express.static(publicPath));/* Expresamos la variable que express debe usar para archivos estáticos */
-app.use(logMiddleware)
+/* app.use(logMiddleware) */
 /* CONFIGURACION RENDERIZACION VISTAS //////////////////////////////////////////////////////////////*/
 app.set('view engine', 'ejs'); /* Expresamos a express motor de vistas como ejs */
 /* /////////////////////////////////////////////////////////////////////////////////////////////// */
