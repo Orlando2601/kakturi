@@ -9,7 +9,16 @@
   "id": 2,
   "nombre": "admin",
   "apellido": "admin",
-  "correo": "admin@gmail.com",
-  "contraseña": "$2a$10$c64zpsXgIhttN7jcHbxjluY1I9pvYOam0lyATY2sAzra0vubNAD2u"
+  "correo": "admin@gmail.com"
+ },
+ {
+  "id": 3,
+  "nombre": [
+   "wsss",
+   " sss"
+  ],
+  "apellido": "ssss",
+  "correo": "vpbd9106@hotmail.com",
+  "contraseña": "$2a$10$m143RynyGDxhfyDTkpwTxusmbWWocvk3GkXKF0hh4JVd4Y6TaUmiO"
  }
 ]
