@@ -12,7 +12,7 @@ const bcryptjs = require('bcryptjs')
 /* CONTROLADOR DE LA RUTA USER ///////////////////////////////////////////////////////*/
 const userController = {
     login: (req,res)=>{
-        res.render('login')
+        res.render('users/login')
 
     },
     userLog:(req,res)=>{
@@ -42,35 +42,33 @@ const userController = {
     },
     registro: (req, res)=>{
         res.cookie('testing', 'holamundo', {maxAge:1000 * 30})
-        res.render('registro')
+        res.render('users/registro')
     },
     storeUser: (req, res)=>{
+        console.log(req.file);
         const errors = validationResult(req)
+        let newReference = usuarios.length
         if(errors.isEmpty()){
             let userInDB = usuarios.find(user => user.correo == req.body.correo);
-                if(userInDB === undefined){
-                    let newReference = usuarios.length
-                    let nuevoUser = {
-                        id: newReference + 1,
-                        ...req.body,
-                        contraseña: bcryptjs.hashSync(req.body.contraseña, 10)
-                        
-                    }
-                    
-                    usuarios.push(nuevoUser)
-                    fs.writeFileSync(usersFilePath, JSON.stringify(usuarios, null, ' '))
-                    res.redirect('/user/login')
-                }else{
-                    res.render('registro')
-                    console.log('el usuario ya xisye')
-                }
-
-            
- 
-        }else{
-            
-            res.render('registro',{
+            if(userInDB === undefined && req.file){
                 
+                let nuevoUser = {
+                    id: newReference + 1,
+                    ...req.body,
+                    contraseña: bcryptjs.hashSync(req.body.contraseña, 10),
+                    imagen:req.file.filename
+                }
+                usuarios.push(nuevoUser)
+                fs.writeFileSync(usersFilePath, JSON.stringify(usuarios, null, ' '))
+                res.redirect('/user/login') 
+            }else{
+                res.render('users/registro')
+                console.log('revisa')
+            }
+        }else{ 
+            
+            res.render('users/registro',{
+            
                 errors: errors.array(),
                 old: req.body
             })
@@ -81,8 +79,7 @@ const userController = {
         res.send('hola admin' + req.query.user)
     },
     adminPerfil:(req,res)=>{
-        
-        res.render('adminPerfil',{
+        res.render('admin/adminPerfil',{
             user: req.session.usuarioLogueado,
             lista: productos
         })

@@ -1,12 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap');
 @import url(/css/parametrizacion.css);
-@import url(/css/header.css);
-@import url(/css/footer.css);
-@import url(/css/mainHome.css);
-@import url(/css/detalleProducto.css);
-@import url(/css/productos.css);
-@import url(/css/login.css);
-@import url(/css/nuevoProducto.css);
-@import url(/css/adminUser.css)
+@import url(/css/partials/header.css);
+@import url(/css/partials/footer.css);
+@import url(/css/products/mainHome.css);
+@import url(/css/products/detalleProducto.css);
+@import url(/css/products/productos.css);
+@import url(/css/users/login.css);
+@import url(/css/admin/nuevoProducto.css);
+@import url(/css/admin/adminUser.css)
 
 
