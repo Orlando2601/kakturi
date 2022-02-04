@@ -8,16 +8,16 @@ const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 /* CONTROLADOR DE LA RUTA PRODUCTS ///////////////////////////////////////////////////////*/
 const productsControllers ={
         products: (req,res)=>{
-            res.render('products',{lista: productos})
+            res.render('products/products',{lista: productos})
         },
         home: (req,res)=>{
-            res.render('home')
+            res.render('products/home')
         },
         detalle: (req,res)=>{
             let id = req.params.id;
             let lista = productos.find(elemento => elemento.id == id);
             
-            res.render('detalleProducto', {lista})
+            res.render('products/detalleProducto', {lista})
         },
         prueba: (req,res)=>{
             res.render('prueba')

@@ -9,7 +9,7 @@
         <title>Detalle producto</title>
     </head>
 <body>
-    <%-include ('./partials/header') %> <!-- importando header -->
+    <%-include ('../partials/header') %> <!-- importando header -->
     <main class="mainAdminPerfil">
         <div class="infoUser">
             <h1>Bienvenido a este espacio administrador de productos <%= user.nombre %></h1>
@@ -41,6 +41,6 @@
         
         <button> <a href="/user/cerrarSesion">Logout</a> </button> <!-- button de cerrar sesion -->
     </main>
-    <%-include ('./partials/footer') %> <!-- importando footer -->
+    <%-include ('../partials/footer') %> <!-- importando footer -->
 </body>
 </html>

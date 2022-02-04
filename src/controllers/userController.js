@@ -12,7 +12,7 @@ const bcryptjs = require('bcryptjs')
 /* CONTROLADOR DE LA RUTA USER ///////////////////////////////////////////////////////*/
 const userController = {
     login: (req,res)=>{
-        res.render('login')
+        res.render('users/login')
 
     },
     userLog:(req,res)=>{
@@ -42,7 +42,7 @@ const userController = {
     },
     registro: (req, res)=>{
         res.cookie('testing', 'holamundo', {maxAge:1000 * 30})
-        res.render('registro')
+        res.render('users/registro')
     },
     storeUser: (req, res)=>{
         const errors = validationResult(req)
@@ -82,7 +82,7 @@ const userController = {
     },
     adminPerfil:(req,res)=>{
         
-        res.render('adminPerfil',{
+        res.render('admin/adminPerfil',{
             user: req.session.usuarioLogueado,
             lista: productos
         })

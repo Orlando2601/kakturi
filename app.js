@@ -2,7 +2,6 @@
 const express = require('express');
 const path = require('path');
 const publicPath = path.resolve(__dirname, './src/public');
-
 const session = require('express-session')
 const cookies = require('cookie-parser')
 const productsRouter = require('./src/routes/productsRouter');

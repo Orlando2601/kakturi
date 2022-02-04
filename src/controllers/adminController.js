@@ -8,7 +8,7 @@ const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 /* CONTROLADOR DE LA RUTA ADMIN ///////////////////////////////////////////////////////*/
 const adminControllers ={
     nuevo:(req,res)=>{
-        res.render('nuevoProducto')
+        res.render('admin/nuevoProducto')
     },
     guardarNuevo:(req, res)=>{
         let newReference = productos.length;
@@ -44,7 +44,7 @@ const adminControllers ={
     editar:(req,res)=>{
         let id = req.params.id
         let toEdit = productos.find(element => element.id == id);
-        res.render('editarProducto',{toEdit})
+        res.render('admin/editarProducto',{toEdit})
     },
     editarGuardar: (req,res)=>{
         let reference = req.params.id

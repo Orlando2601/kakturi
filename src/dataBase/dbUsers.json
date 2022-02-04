@@ -20,5 +20,12 @@
   "apellido": "ssss",
   "correo": "vpbd9106@hotmail.com",
   "contraseña": "$2a$10$m143RynyGDxhfyDTkpwTxusmbWWocvk3GkXKF0hh4JVd4Y6TaUmiO"
+ },
+ {
+  "id": 4,
+  "nombre": "oswar",
+  "apellido": "baez",
+  "correo": "oswar@gmail.com",
+  "contraseña": "$2a$10$sqk4CCXsizZ3mTamWkgPHus2iFUZs90uPTNgKqoGyyNHo1ch2e37y"
  }
 ]
