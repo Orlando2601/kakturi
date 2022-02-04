@@ -1,31 +1,18 @@
 [
  {
   "id": 1,
-  "nombre": "Oswar",
-  "apellido": "Baez",
-  "correo": "oswar.baez26@gmail.com"
+  "nombre": "orlando",
+  "apellido": "baez",
+  "correo": "admin@gmail.com",
+  "contraseña": "$2a$10$7XURPLS7fSGsK6QbBMnpquKLp7Jww4wp.QzCZUIcB/9zh4HRXrw6G",
+  "imagen": "imagen1644004274525.jpg"
  },
  {
   "id": 2,
-  "nombre": "admin",
-  "apellido": "admin",
-  "correo": "admin@gmail.com"
- },
- {
-  "id": 3,
-  "nombre": [
-   "wsss",
-   " sss"
-  ],
-  "apellido": "ssss",
-  "correo": "vpbd9106@hotmail.com",
-  "contraseña": "$2a$10$m143RynyGDxhfyDTkpwTxusmbWWocvk3GkXKF0hh4JVd4Y6TaUmiO"
- },
- {
-  "id": 4,
-  "nombre": "oswar",
-  "apellido": "baez",
-  "correo": "oswar@gmail.com",
-  "contraseña": "$2a$10$sqk4CCXsizZ3mTamWkgPHus2iFUZs90uPTNgKqoGyyNHo1ch2e37y"
+  "nombre": "vanessa",
+  "apellido": "barrios",
+  "correo": "adminvane@gmail.com",
+  "contraseña": "$2a$10$eW60wsiIR5UhwFJBXJNfhurkLx5hS8hUgW7xMlaDow1/PAvP9vXti",
+  "imagen": "imagen1644004347771.jpg"
  }
 ]

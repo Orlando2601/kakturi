@@ -11,6 +11,9 @@
 <body>
     <%-include ('../partials/header') %> <!-- importando header -->
     <main class="mainAdminPerfil">
+        <section class="imagenUser">
+            <img src="/images/dbUsers/<%= user.imagen %>" alt="">
+        </section>
         <div class="infoUser">
             <h1>Bienvenido a este espacio administrador de productos <%= user.nombre %></h1>
         </div>

@@ -26,5 +26,47 @@
    "gray"
   ],
   "imagen": "imagen1643490250337.jpg"
+ },
+ {
+  "id": 3,
+  "titulo": "fimo",
+  "descripcion": "flor",
+  "precio": "35000",
+  "colores": [
+   "rojo",
+   "amarillo",
+   "verder",
+   "azul",
+   "marron"
+  ],
+  "imagen": "imagen1644003014909.jpg"
+ },
+ {
+  "id": 4,
+  "titulo": "fimo",
+  "descripcion": "flor",
+  "precio": "35000",
+  "colores": [
+   "rojo",
+   "amarillo",
+   "verder",
+   "azul",
+   "marron"
+  ],
+  "imagen": "imagen1644003100930.jpg"
+ },
+ {
+  "id": 5,
+  "titulo": "fimo",
+  "descripcion": "flor",
+  "precio": "35000",
+  "colores": [
+   "rojo",
+   "amarillo",
+   "verder",
+   "azul",
+   "marron"
+  ],
+  "imagen": "imagen1644003109839.jpg"
  }
 ]
