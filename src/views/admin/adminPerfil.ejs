@@ -17,6 +17,7 @@
         <div class="infoUser">
             <h1>Bienvenido a este espacio administrador de productos <%= user.nombre %></h1>
         </div>
+        <button> <a href="/admin/nuevo">Crear Nuevo Producto</a> </button> <!-- button de cerrar sesion -->
         <div class="articulo">
             <% lista.forEach(item => { %> <!-- codigo js para rcorrer el objeto enviado en el controlador -->
             <article>

@@ -48,10 +48,10 @@ let multerImageMidlewareUser = fileUploadUser.single('imagen')
 
 /* ADMINISTRACION DE RUTAS ///////////////////////////////////////////////////////////////// */
 router.get('/login',guestMiddleware,userController.login);
-router.post('/login',validacionesLog, userController.userLog );
+router.post('/login',validacionesLog,guestMiddleware, userController.userLog );
 router.get('/adminPerfil', notLogMiddleware, userController.adminPerfil);
 router.get('/cerrarSesion', userController.cerrarSesion);
-router.get('/registro', guestMiddleware, userController.registro);
+router.get('/registro', guestMiddleware,validaciones, userController.registro);
 router.post('/registro',multerImageMidlewareUser,  userController.storeUser);
 /* ///////////////////////////////////////////////////////////////////////////////////////// */
 

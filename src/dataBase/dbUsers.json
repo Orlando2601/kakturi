@@ -14,5 +14,13 @@
   "correo": "adminvane@gmail.com",
   "contraseña": "$2a$10$eW60wsiIR5UhwFJBXJNfhurkLx5hS8hUgW7xMlaDow1/PAvP9vXti",
   "imagen": "imagen1644004347771.jpg"
+ },
+ {
+  "id": 3,
+  "nombre": "agueda",
+  "apellido": "corredor",
+  "correo": "corredor@gmail.com",
+  "contraseña": "$2a$10$6B09o8BW1UyuKuxLgAUyueLLMv0EvclivlU4kWeIo9cxDiAYVC6IS",
+  "imagen": "imagen1644979484561.png"
  }
 ]
