@@ -1,72 +1,99 @@
 [
  {
-  "id": 1,
-  "titulo": "ROdio",
-  "descripcion": "aaaa",
-  "precio": "35000",
-  "colores": [
-   "black",
-   "green",
-   "yellow",
-   "blue"
-  ],
-  "imagen": "imagen1643480526354.jpg"
+  "id": "1",
+  "titulo": "Tapas Botella",
+  "descripcion": "Dije en rodio forma tapa botella, 15mm",
+  "precio": "6000",
+  "imagen": "imagen1645023003355.png"
  },
  {
   "id": 2,
-  "titulo": "k,frk",
-  "descripcion": "n kv",
-  "precio": "vrgvrg",
+  "titulo": "Corazon Pink",
+  "descripcion": "Dije en rodio formacorazon, 15mm",
+  "precio": "6500",
   "colores": [
-   "yellow",
-   "pink",
-   "purple",
-   "blue",
-   "brown",
-   "gray"
+   "pink"
   ],
-  "imagen": "imagen1643490250337.jpg"
+  "imagen": "imagen1645022732376.png"
  },
  {
   "id": 3,
-  "titulo": "fimo",
-  "descripcion": "flor",
-  "precio": "35000",
+  "titulo": "Hoja",
+  "descripcion": "Dije rodio tipo hoja, 8 mm",
+  "precio": "4500",
   "colores": [
-   "rojo",
-   "amarillo",
-   "verder",
-   "azul",
-   "marron"
+   "green"
   ],
-  "imagen": "imagen1644003014909.jpg"
+  "imagen": "imagen1645022792207.png"
  },
  {
   "id": 4,
-  "titulo": "fimo",
-  "descripcion": "flor",
-  "precio": "35000",
+  "titulo": "Gato",
+  "descripcion": "DIje rodio Gato",
+  "precio": "7500",
   "colores": [
-   "rojo",
-   "amarillo",
-   "verder",
-   "azul",
-   "marron"
+   "gold"
   ],
-  "imagen": "imagen1644003100930.jpg"
+  "imagen": "imagen1645022905514.png"
  },
  {
   "id": 5,
-  "titulo": "fimo",
-  "descripcion": "flor",
-  "precio": "35000",
+  "titulo": "Corazon Carita",
+  "descripcion": "Separador plastico, por inyecciòn forma de corazon orificio vertical",
+  "precio": "300",
   "colores": [
-   "rojo",
-   "amarillo",
-   "verder",
-   "azul",
-   "marron"
+   "blue",
+   "yellow",
+   "pink",
+   "red",
+   "purple",
+   "orange"
   ],
-  "imagen": "imagen1644003109839.jpg"
+  "imagen": "imagen1645023179127.png"
+ },
+ {
+  "id": 6,
+  "titulo": "FlorCarita",
+  "descripcion": "Separador plastico, por inyecciòn forma de flor orificio horizontal",
+  "precio": "300",
+  "colores": [
+   "blue",
+   "yellow",
+   "pink",
+   "red",
+   "purple",
+   "orange"
+  ],
+  "imagen": "imagen1645023286353.png"
+ },
+ {
+  "id": 7,
+  "titulo": "Oje providencia",
+  "descripcion": "Dije en rodio circon azul, 8 mm",
+  "precio": "6500",
+  "colores": [
+   "blue"
+  ],
+  "imagen": "imagen1645024326484.png"
+ },
+ {
+  "id": 8,
+  "titulo": "Infinito",
+  "descripcion": "Separador infinito de acero con orificio acada lado para usarlo en centro de pulseras",
+  "precio": "6000",
+  "colores": [
+   "steel"
+  ],
+  "imagen": "imagen1645024437839.png"
+ },
+ {
+  "id": 9,
+  "titulo": "Guayos Futbol",
+  "descripcion": "Separador acero Guayo zapato futbol",
+  "precio": "5500",
+  "colores": [
+   "gold"
+  ],
+  "imagen": "imagen1645024509697.png"
  }
 ]

@@ -24,15 +24,18 @@ const userController = {
                     if(bcryptjs.compareSync(req.body.contraseña, usuarios[i].contraseña)){
                        
                        usuarioAloguearse = usuarios[i];
+                      
                        delete usuarioAloguearse.contraseña  
+                       break;
                     }                   
                 }
             }
             if(usuarioAloguearse == undefined){
                 console.log('No existe usuario')
-                res.render('login')                
+                return res.redirect('/user/login')                
             }
             req.session.usuarioLogueado = usuarioAloguearse;
+            console.log('el usuario es ' + req.session.usuarioLogueado)
             console.log('Datos de usuario', req.session)
             res.redirect('/user/adminPerfil')
         }else{
@@ -63,7 +66,7 @@ const userController = {
                 res.redirect('/user/login') 
             }else{
                 res.render('users/registro')
-                console.log('revisa')
+                console.log('Usuario registrado')
             }
         }else{ 
             

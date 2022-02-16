@@ -4,6 +4,8 @@ const router = express.Router(); /* Definimos el método Router de express a la 
 const path = require('path')
 const multer = require('multer')
 const adminController = require('../controllers/adminController');
+const guestMiddleware = require('../middlewares/guestMiddleware')
+const notLogMiddleware =require('../middlewares/notLogMiddleware')
 /* //////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* CONFIGURACION MULTER */
@@ -22,7 +24,7 @@ let fileUpload = multer({storage:multerDiskStorage});
 let multerImageMidleware = fileUpload.single('imagen')
 /* //////////////////////////////////////////////////////////////////////// */
 /* ADMINISTRACION DE RUTAS */
-router.get('/nuevo', adminController.nuevo);
+router.get('/nuevo', notLogMiddleware, adminController.nuevo);
 router.post('/nuevo',multerImageMidleware,  adminController.guardarNuevo)
 router.get('/editar/:id', adminController.editar)
 router.patch('/editar/:id',multerImageMidleware, adminController.editarGuardar)
