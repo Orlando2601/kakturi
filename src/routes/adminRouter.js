@@ -26,7 +26,7 @@ let multerImageMidleware = fileUpload.single('imagen')
 /* ADMINISTRACION DE RUTAS */
 router.get('/nuevo', notLogMiddleware, adminController.nuevo);
 router.post('/nuevo',multerImageMidleware,  adminController.guardarNuevo)
-router.get('/editar/:id', adminController.editar)
+router.get('/editar/:id',notLogMiddleware, adminController.editar)
 router.patch('/editar/:id',multerImageMidleware, adminController.editarGuardar)
 router.delete('/eliminar/:id', adminController.eliminar)
 /* //////////////////////////////////////////////////////////////////////// */

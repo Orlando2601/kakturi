@@ -22,5 +22,21 @@
   "correo": "corredor@gmail.com",
   "contraseña": "$2a$10$6B09o8BW1UyuKuxLgAUyueLLMv0EvclivlU4kWeIo9cxDiAYVC6IS",
   "imagen": "imagen1644979484561.png"
+ },
+ {
+  "id": 4,
+  "nombre": "cddd",
+  "apellido": "ssssss",
+  "correo": "kjbdk@gmail.com",
+  "contraseña": "$2a$10$jMgKedg8X9.PoJFz0BetWeKJpwBlVpMfRkBvRBaOr56IA1LPXbUc2",
+  "imagen": "imagen1645123747360.png"
+ },
+ {
+  "id": 5,
+  "nombre": "rocko",
+  "apellido": "baez",
+  "correo": "rockobaez@gmail.com",
+  "contraseña": "$2a$10$FIPfYfAjYiWpcvFp/f02Vuab0.2Mu.kg5v/DeYiyAvIJ2tApCZpka",
+  "imagen": "imagen1645454055563.png"
  }
 ]

@@ -1,46 +1,64 @@
 /* IMPORTACION DE MODULOS //////////////////////////////////////////////////////////////*/
 const fs = require('fs');
 const path = require('path')
-const usersFilePath = path.join(__dirname, '../dataBase/dbUsers.json');
-const usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 const productsFilePath = path.join(__dirname, '../dataBase/dbProductos.json');
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-
-const { validationResult } = require('express-validator')
+const { validationResult, cookie, body } = require('express-validator')
 const bcryptjs = require('bcryptjs')
 /* /////////////////////////////////////////////////////////////////////////////////// */
 /* CONTROLADOR DE LA RUTA USER ///////////////////////////////////////////////////////*/
 const userController = {
-    login: (req,res)=>{
-        res.render('users/login')
+    login: async(req,res)=>{
+        try{
+            await res.render('users/login')
+        }catch(error){
+
+        }
+        
 
     },
     userLog:(req,res)=>{
+        const usersFilePath = path.join(__dirname, '../dataBase/dbUsers.json');
+        const usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
         const errors = validationResult(req);
+        const errores = errors.mapped();
         let usuarioAloguearse;
         if(errors.isEmpty()){
             for (let i=0; i < usuarios.length; i++){
                 if(usuarios[i].correo == req.body.correo){
+                    console.log(' la contraseña es')
+                    console.log(usuarios[i].contraseña)
                     if(bcryptjs.compareSync(req.body.contraseña, usuarios[i].contraseña)){
                        
                        usuarioAloguearse = usuarios[i];
-                      
-                       delete usuarioAloguearse.contraseña  
+                      console.log(usuarios[i])
+                       delete usuarioAloguearse.contraseña 
+                       console.log(usuarios[i]) 
                        break;
+                    } else{
+                        res.render('users/login', {
+                        
+                        old:req.body})
                     }                   
                 }
             }
             if(usuarioAloguearse == undefined){
                 console.log('No existe usuario')
-                return res.redirect('/user/login')                
+                return res.render('/user/login',{
+                    errors:[correo.msg]
+                })                
             }
             req.session.usuarioLogueado = usuarioAloguearse;
             console.log('el usuario es ' + req.session.usuarioLogueado)
             console.log('Datos de usuario', req.session)
             res.redirect('/user/adminPerfil')
         }else{
-            console.log(errors)
-            res.render('login', {errors:errors.errors})
+            
+            res.render('users/login', {
+                errors:errores,
+                old:req.body
+            })
+            console.log(errores)
         }
     },
     registro: (req, res)=>{
@@ -48,11 +66,14 @@ const userController = {
         res.render('users/registro')
     },
     storeUser: (req, res)=>{
-        console.log(req.file);
+       
         const errors = validationResult(req)
+        const errores = errors.mapped();
+        
         let newReference = usuarios.length
         if(errors.isEmpty()){
             let userInDB = usuarios.find(user => user.correo == req.body.correo);
+            console.log(req.body.correo)
             if(userInDB === undefined && req.file){
                 
                 let nuevoUser = {
@@ -69,14 +90,13 @@ const userController = {
                 console.log('Usuario registrado')
             }
         }else{ 
-            
+            console.log(errores)
             res.render('users/registro',{
             
-                errors: errors.array(),
+                errors: errores,
                 old: req.body
             })
         }
-
     },
     admin:(req, res)=>{
         res.send('hola admin' + req.query.user)
@@ -89,10 +109,16 @@ const userController = {
 
         
     },
-    cerrarSesion: (req,res)=>{
-        req.session.destroy();
-        console.log(req.session)
-        res.redirect('/')
+    cerrarSesion: async (req,res)=>{
+        try{
+            await req.session.destroy();
+            res.render('products/home')
+
+        }catch(error){
+            console.log(error)
+        }
+        
+ 
     }
 }
 /* ////////////////////////////////////////////////////////////////////// */

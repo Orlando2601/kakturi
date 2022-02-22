@@ -1,7 +1,7 @@
 function notLogMiddleware (req, res,next){
     if(req.session.usuarioLogueado === undefined){
         return res.redirect('/user/login');
-
+        
     }
     next()
 
