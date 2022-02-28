@@ -1,23 +1,6 @@
 [
  {
-  "id": "1",
-  "titulo": "Tapas Botella",
-  "descripcion": "Dije en rodio forma tapa botella, 15mm",
-  "precio": "6000",
-  "imagen": "imagen1645023003355.png"
- },
- {
-  "id": 2,
-  "titulo": "Corazon Pink",
-  "descripcion": "Dije en rodio formacorazon, 15mm",
-  "precio": "6500",
-  "colores": [
-   "pink"
-  ],
-  "imagen": "imagen1645022732376.png"
- },
- {
-  "id": 3,
+  "id": 1,
   "titulo": "Hoja",
   "descripcion": "Dije rodio tipo hoja, 8 mm",
   "precio": "4500",
@@ -27,7 +10,7 @@
   "imagen": "imagen1645022792207.png"
  },
  {
-  "id": 4,
+  "id": 2,
   "titulo": "Gato",
   "descripcion": "DIje rodio Gato",
   "precio": "7500",
@@ -37,7 +20,7 @@
   "imagen": "imagen1645022905514.png"
  },
  {
-  "id": 5,
+  "id": 3,
   "titulo": "Corazon Carita",
   "descripcion": "Separador plastico, por inyecciòn forma de corazon orificio vertical",
   "precio": "300",
@@ -52,7 +35,7 @@
   "imagen": "imagen1645023179127.png"
  },
  {
-  "id": 6,
+  "id": 4,
   "titulo": "FlorCarita",
   "descripcion": "Separador plastico, por inyecciòn forma de flor orificio horizontal",
   "precio": "300",
@@ -67,7 +50,7 @@
   "imagen": "imagen1645023286353.png"
  },
  {
-  "id": 7,
+  "id": 5,
   "titulo": "Oje providencia",
   "descripcion": "Dije en rodio circon azul, 8 mm",
   "precio": "6500",
@@ -77,7 +60,7 @@
   "imagen": "imagen1645024326484.png"
  },
  {
-  "id": 8,
+  "id": 6,
   "titulo": "Infinito",
   "descripcion": "Separador infinito de acero con orificio acada lado para usarlo en centro de pulseras",
   "precio": "6000",
@@ -87,7 +70,7 @@
   "imagen": "imagen1645024437839.png"
  },
  {
-  "id": 9,
+  "id": 7,
   "titulo": "Guayos Futbol",
   "descripcion": "Separador acero Guayo zapato futbol",
   "precio": "5500",

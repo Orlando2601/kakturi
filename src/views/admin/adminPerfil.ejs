@@ -1,13 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <link rel="stylesheet" href="/css/styles.css"> <!-- Configuración de carpeta para diseños CSS -->
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" /><!-- Link para obtener iconos de la pagina enlazada, para agregar se debe ver la sintaxis que muetsra la pagina -->
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Detalle producto</title>
-    </head>
+    <%- include ('../partials/head') %>
 <body>
     <%-include ('../partials/header') %> <!-- importando header -->
     <main class="mainAdminPerfil">
@@ -17,7 +10,7 @@
         <div class="infoUser">
             <h1>Bienvenido a este espacio administrador de productos <%= user.nombre %></h1>
         </div>
-        <button> <a href="/admin/nuevo">Crear Nuevo Producto</a> </button> <!-- button de cerrar sesion -->
+        <button id="crearProducto"> <a href="/admin/nuevo">Crear Nuevo Producto</a> </button> <!-- button de cerrar sesion -->
         <div class="articulo">
             <% lista.forEach(item => { %> <!-- codigo js para rcorrer el objeto enviado en el controlador -->
             <article>
@@ -29,12 +22,12 @@
                <div class="vermas">
                    <p class="titulo"><%= item.titulo %></p>
                    <p class="precio">COP$<%= item.precio %></p>
-                   <div class="botones">
+                   <div id="botones">
                     <form class="formCompra"  action="/admin/editar/<%= item.id %>">
-                        <input class="edit" type="submit"  value="Editar Producto">
+                        <input id="edit" type="submit"  value="Editar Producto">
                     </form> <!-- control de button para editar producto-->
                     <form class="formCompra" action="/admin/eliminar/<%= item.id %>?_method=delete" method="POST">
-                        <input  class="delete" type="submit"  value="Borrar Producto">
+                        <input  id="delete" type="submit"  value="Borrar Producto">
                     </form><!-- control de button para eliminar producto -->
                 </div>
                </div><!-- Caja desplegable de cada articulo, par aver descripcion rapida -->
@@ -43,7 +36,7 @@
             <% }); %><!-- cierre codigo js anterior -->
         </div>
         
-        <button> <a href="/user/cerrarSesion">Logout</a> </button> <!-- button de cerrar sesion -->
+        <button id="cerrarSesion"> <a href="/user/cerrarSesion">Logout</a> </button> <!-- button de cerrar sesion -->
     </main>
     <%-include ('../partials/footer') %> <!-- importando footer -->
 </body>

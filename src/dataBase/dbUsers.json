@@ -38,5 +38,13 @@
   "correo": "rockobaez@gmail.com",
   "contraseña": "$2a$10$FIPfYfAjYiWpcvFp/f02Vuab0.2Mu.kg5v/DeYiyAvIJ2tApCZpka",
   "imagen": "imagen1645454055563.png"
+ },
+ {
+  "id": 6,
+  "nombre": "oswar",
+  "apellido": "baez",
+  "correo": "oswar@gmail.com",
+  "contraseña": "$2a$10$Mxvsy5YuLMXVTuAqZUHtL.IaghQ4E/FeFUmfrwNfC9xDZT.IFvn1m",
+  "imagen": "imagen1646011585371.png"
  }
 ]

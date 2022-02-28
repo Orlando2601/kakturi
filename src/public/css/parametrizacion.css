@@ -8,7 +8,7 @@
     --gris-oscuro: #666;
     --gris-claro: #ebebeb;
     --verde-text:#125C13;
-    --verde: #39b54a;
+    --verde: #125C13;
     --negro: black;
     --blanco: #fff;
     /*Tamaños de fuentes*/
@@ -19,6 +19,12 @@
     --text-md: 2.5em;
     --text-lg: 3em;
     --title-md: 4em;
+    --font-size-XS: 1em;
+    --font-size-S: 1.2em;
+    --font-size-M: 1.4em;
+    --font-size-L: 1.9em;
+    --font-size-XL: 2em;
+    --font-size-XXL: 2.5em;
     /* Text size news */
     --h1:1.5rem;
     --iconos:1.5rem;

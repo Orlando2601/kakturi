@@ -5,6 +5,8 @@ const productsFilePath = path.join(__dirname, '../dataBase/dbProductos.json');
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const { validationResult, cookie, body } = require('express-validator')
 const bcryptjs = require('bcryptjs')
+const usersFilePath = path.join(__dirname, '../dataBase/dbUsers.json');
+const usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 /* /////////////////////////////////////////////////////////////////////////////////// */
 /* CONTROLADOR DE LA RUTA USER ///////////////////////////////////////////////////////*/
 const userController = {
@@ -20,82 +22,40 @@ const userController = {
     userLog:(req,res)=>{
         const usersFilePath = path.join(__dirname, '../dataBase/dbUsers.json');
         const usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-        const errors = validationResult(req);
-        const errores = errors.mapped();
-        let usuarioAloguearse;
-        if(errors.isEmpty()){
-            for (let i=0; i < usuarios.length; i++){
-                if(usuarios[i].correo == req.body.correo){
-                    console.log(' la contraseña es')
-                    console.log(usuarios[i].contraseña)
-                    if(bcryptjs.compareSync(req.body.contraseña, usuarios[i].contraseña)){
-                       
-                       usuarioAloguearse = usuarios[i];
-                      console.log(usuarios[i])
-                       delete usuarioAloguearse.contraseña 
-                       console.log(usuarios[i]) 
-                       break;
-                    } else{
-                        res.render('users/login', {
-                        
-                        old:req.body})
-                    }                   
-                }
-            }
-            if(usuarioAloguearse == undefined){
-                console.log('No existe usuario')
-                return res.render('/user/login',{
-                    errors:[correo.msg]
-                })                
-            }
-            req.session.usuarioLogueado = usuarioAloguearse;
-            console.log('el usuario es ' + req.session.usuarioLogueado)
-            console.log('Datos de usuario', req.session)
-            res.redirect('/user/adminPerfil')
-        }else{
-            
-            res.render('users/login', {
-                errors:errores,
-                old:req.body
-            })
-            console.log(errores)
-        }
+        const errores = validationResult(req);
+        let user;
+        (errores.errors.length > 0) ? res.render('users/login',{errors:errores.mapped(),old:req.body}) : user =  usuarios.find(ele => ele.correo == req.body.correo);              
+        let validacionPassword;
+        !user ? res.render('users/login',{errors:{correo:{msg:'No se encontro el correo'}}}) : validacionPassword =  bcryptjs.compareSync(req.body.contraseña, user.contraseña);
+        !validacionPassword ? res.render('users/login',{errors:{contraseña:{msg:"Tu contrasena no coincide"}}}): delete user.contraseña; req.session.usuarioLogueado = user;               
+        req.body.recordame ? res.cookie('correo', req.body.correo,{maxAge:60000*60*12}): res.redirect('/admin/adminPerfil');
+        return res.redirect('/user/adminPerfil');
+
+
     },
     registro: (req, res)=>{
         res.cookie('testing', 'holamundo', {maxAge:1000 * 30})
         res.render('users/registro')
     },
     storeUser: (req, res)=>{
+        const errores = validationResult(req);
+        let user
        
-        const errors = validationResult(req)
-        const errores = errors.mapped();
-        
-        let newReference = usuarios.length
-        if(errors.isEmpty()){
-            let userInDB = usuarios.find(user => user.correo == req.body.correo);
-            console.log(req.body.correo)
-            if(userInDB === undefined && req.file){
-                
-                let nuevoUser = {
-                    id: newReference + 1,
-                    ...req.body,
-                    contraseña: bcryptjs.hashSync(req.body.contraseña, 10),
-                    imagen:req.file.filename
-                }
-                usuarios.push(nuevoUser)
-                fs.writeFileSync(usersFilePath, JSON.stringify(usuarios, null, ' '))
-                res.redirect('/user/login') 
-            }else{
-                res.render('users/registro')
-                console.log('Usuario registrado')
-            }
-        }else{ 
-            console.log(errores)
-            res.render('users/registro',{
+        (errores.errors.length > 0) ? res.render('users/registro',{errors:errores.mapped(),old:req.body}) : user =  usuarios.find(ele => ele.correo == req.body.correo);
+        user ? res.render('users/registro',{errors:{correo:{msg:"este correo ya se encuentra registrado"}},old:req.body}): user = false;
+        if(user === false && req.file && errores.errors.length === 0){
+            let newReference = usuarios.length
             
-                errors: errores,
-                old: req.body
-            })
+            let nuevoUser = {
+                id: newReference + 1,
+                ...req.body,
+                contraseña: bcryptjs.hashSync(req.body.contraseña, 10),
+                imagen:req.file.filename
+            }
+            delete nuevoUser.repiteContraseña;
+            usuarios.push(nuevoUser)
+            fs.writeFileSync(usersFilePath, JSON.stringify(usuarios, null, ' '))
+            res.redirect('/user/login') 
         }
     },
     admin:(req, res)=>{
@@ -109,14 +69,13 @@ const userController = {
 
         
     },
-    cerrarSesion: async (req,res)=>{
-        try{
-            await req.session.destroy();
-            res.render('products/home')
+    cerrarSesion: (req,res)=>{
+            res.clearCookie('correo')
+            req.session.destroy();
+            delete res.locals
+           return res.render('users/login')
 
-        }catch(error){
-            console.log(error)
-        }
+      
         
  
     }
