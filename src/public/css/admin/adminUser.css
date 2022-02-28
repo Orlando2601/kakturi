@@ -17,6 +17,7 @@
     flex-wrap: wrap;
     align-items: center;
     justify-content: center; 
+    background-color:#f2f5c7;
   
 }
 .mainAdminPerfil .articulo{
@@ -123,7 +124,16 @@
        
 
 }
-
+.mainAdminPerfil article .vermas .titulo{
+    font-family: var(--fuente);
+    font-size: var(--font-size-XXL);
+   
+   }
+   .mainAdminPerfil article .vermas .precio{
+       font-family: var(--fuente);
+       font-size: var(--font-size-XXL);
+      
+      }
 
 
 @media (max-width: 480px) {

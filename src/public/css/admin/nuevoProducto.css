@@ -4,6 +4,7 @@
     align-items: center;
     gap: 10px;
     margin-bottom: 20px;
+    background-color:#f2f5c7;
 }
 .mainCrearProducto .imagen-edit{
  width: 35%;
@@ -38,3 +39,7 @@ justify-content: space-between;
         height: 30vw;
         
     }
+
+#guardar {
+    align-self: center;
+}

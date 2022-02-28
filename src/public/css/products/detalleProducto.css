@@ -3,7 +3,7 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background-color: rgb(137, 154, 104);
+    background-color:#f2f5c7;
 }
 
 .detalleProducto .imagenDetalle{
@@ -55,20 +55,7 @@ height: 30px;
 
 
 
-.detalleProducto .descripcionDetalle .formCompra .edit{
-    
-    background-color: orange;
-    padding: 3px;
-    font-family: var(--fuente);
-    font-size: var(--text-lg);
-}
-.detalleProducto .descripcionDetalle .formCompra .delete{
-    
-    background-color: red;
-    padding: 3px;
-    font-family: var(--fuente);
-    font-size: var(--text-lg);
-}
+
 
 #detalleColor {
 display: flex;
