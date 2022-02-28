@@ -124,3 +124,45 @@
 
 }
 
+
+
+@media (max-width: 480px) {
+
+    .mainAdminPerfil article {
+        width: 100%;
+        height: 100%;
+   
+    }
+
+
+}
+@media (min-width: 481px)  and (max-width:600px) {
+
+    .mainAdminPerfil article {
+        width: 46%;
+        height:46%;
+   
+    }
+
+
+}
+@media (min-width: 601px)  and (max-width:900px) {
+
+    .mainAdminPerfil article {
+        width: 33%;
+        height: 33%;
+   
+    }
+
+
+}
+@media (min-width: 901px){
+
+    .mainAdminPerfil article {
+        width: 25%;
+        height: 25%;
+   
+    }
+
+
+}

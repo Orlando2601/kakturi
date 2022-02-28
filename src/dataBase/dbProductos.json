@@ -1,6 +1,6 @@
 [
  {
-  "id": 1,
+  "id": "1",
   "titulo": "Hoja",
   "descripcion": "Dije rodio tipo hoja, 8 mm",
   "precio": "4500",
@@ -20,7 +20,7 @@
   "imagen": "imagen1645022905514.png"
  },
  {
-  "id": 3,
+  "id": "3",
   "titulo": "Corazon Carita",
   "descripcion": "Separador plastico, por inyecciòn forma de corazon orificio vertical",
   "precio": "300",
@@ -51,16 +51,6 @@
  },
  {
   "id": 5,
-  "titulo": "Oje providencia",
-  "descripcion": "Dije en rodio circon azul, 8 mm",
-  "precio": "6500",
-  "colores": [
-   "blue"
-  ],
-  "imagen": "imagen1645024326484.png"
- },
- {
-  "id": 6,
   "titulo": "Infinito",
   "descripcion": "Separador infinito de acero con orificio acada lado para usarlo en centro de pulseras",
   "precio": "6000",
@@ -70,7 +60,7 @@
   "imagen": "imagen1645024437839.png"
  },
  {
-  "id": 7,
+  "id": 6,
   "titulo": "Guayos Futbol",
   "descripcion": "Separador acero Guayo zapato futbol",
   "precio": "5500",

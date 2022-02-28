@@ -48,13 +48,15 @@ const adminControllers ={
     },
     editarGuardar: (req,res)=>{
         let reference = req.params.id
+        let colores = req.body.colores
         let toStore = productos.find(element => element.id == reference)
-        
+        let arrayColor = (colores.replace(/ /g,'')).split(',')
         if (req.file){
             let update = {
                 id:reference,
                 ...req.body,
-                imagen: req.file.filename
+                imagen: req.file.filename,
+                colores: arrayColor
                 
             }
             productos[reference -1] = update
@@ -64,7 +66,8 @@ const adminControllers ={
             let update = {
                 id:reference,
                 ...req.body,
-                imagen: toStore.imagen
+                imagen: toStore.imagen,
+                colores: arrayColor
                 
             }
             productos[reference -1] = update
