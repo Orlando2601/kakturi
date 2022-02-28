@@ -5,9 +5,10 @@
     gap: 10px;
     margin-bottom: 20px;
     background-color:#f2f5c7;
+    padding: 10px;
 }
 .mainCrearProducto .imagen-edit{
- width: 35%;
+ width: 50%;
     
 }
 .mainCrearProducto .imagen-edit img{
