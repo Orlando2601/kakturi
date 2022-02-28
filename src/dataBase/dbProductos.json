@@ -1,6 +1,6 @@
 [
  {
-  "id": "1",
+  "id": 1,
   "titulo": "Hoja",
   "descripcion": "Dije rodio tipo hoja, 8 mm",
   "precio": "4500",
@@ -20,7 +20,7 @@
   "imagen": "imagen1645022905514.png"
  },
  {
-  "id": "3",
+  "id": 3,
   "titulo": "Corazon Carita",
   "descripcion": "Separador plastico, por inyecciòn forma de corazon orificio vertical",
   "precio": "300",
