@@ -10,6 +10,6 @@ footer {
 }
 footer h4 {
     font-family: var(--fuente);
-    font-size: var(--title-md);
+    font-size: var(--title-xs);
     color: #3E6B1C
 }

@@ -12,19 +12,33 @@
             
             <div>
                 <label for="titulo">Nombre</label>
-                <input type="text" id="titulo" name="titulo"  placeholder="Ingrese nombre de producto" >
+                <input type="text" id="titulo" name="titulo"  placeholder="Ingrese nombre de producto" value="<%= locals.old && old.titulo ? old.titulo : '' %>">
+               
             </div>
+            <% if(locals.errors && errors.titulo){ %>                   
+                <p id="showError"><%= errors.titulo.msg%></p>             
+            <% }%>
             <div>
                 <label for="descripcion">Descripción</label>
-                <input type="text" id="descripcion" name="descripcion"  placeholder="Ingrese descripcion de producto" >
+                <input type="text" id="descripcion" name="descripcion"  placeholder="Ingrese descripcion de producto" value="<%= locals.old && old.descripcion ? old.descripcion : '' %>">
+               
+            
             </div>
+            <% if(locals.errors && errors.descripcion){ %>                   
+                <p id="showError"><%= errors.descripcion.msg%></p>             
+            <% }%>
             <div>
                 <label for="precio">Precio</label>
-                <input type="text" id="precio" name="precio" placeholder="Ingrese cantidad disponible" >
+                <input type="text" id="precio" name="precio" placeholder="Ingrese cantidad disponible" value="<%= locals.old && old.precio ? old.precio : '' %>">
+               
             </div>
+            <% if(locals.errors && errors.precio){ %>                   
+                <p id="showError"><%= errors.precio.msg%></p>             
+            <% }%>
             <div>
                 <label for="colores">Colores</label>
                 <input type="text" id="colores" name="colores" placeholder="Ingrese colores disponibles" >
+
             </div>
             <div>
                 <label for="imagen">Imagen de descripción</label>

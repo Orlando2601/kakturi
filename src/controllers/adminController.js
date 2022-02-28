@@ -4,6 +4,8 @@ const fs = require('fs');
 const path = require('path')
 const productsFilePath = path.join(__dirname, '../dataBase/dbProductos.json');
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
+const { validationResult} = require('express-validator')
+
 /* /////////////////////////////////////////////////////////////////////////////////// */
 /* CONTROLADOR DE LA RUTA ADMIN ///////////////////////////////////////////////////////*/
 const adminControllers ={
@@ -11,12 +13,17 @@ const adminControllers ={
         res.render('admin/nuevoProducto')
     },
     guardarNuevo:(req, res)=>{
+        const errores = validationResult(req);
+        console.log(errores.mapped())
         let newReference = productos.length;
         let colores = req.body.colores
         let arrayColor = (colores.replace(/ /g,'')).split(',')
-        console.log(arrayColor)
-        
-        if (req.file){
+        let errorsNew;
+        (errores.errors.length > 0) 
+        ? res.render('admin/nuevoProducto',{errors:errores.mapped(),old:req.body}) 
+        : errorsNew = false;
+       
+        if (errorsNew === false && req.file && errores.errors.length === 0){
             let nuevo = {
                 id:newReference + 1,
                 ...req.body,
@@ -27,9 +34,6 @@ const adminControllers ={
             productos.push(nuevo)
 			fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '))
 			res.redirect('/')    
-        }
-        else{
-            res.redirect('nuevo')
         }
     },
     eliminar:(req, res)=>{
