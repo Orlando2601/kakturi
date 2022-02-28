@@ -26,9 +26,20 @@
             <div class="div-btn-header">
                 <a class="a-btn-header" href="#">Contactanos</a>
             </div><!-- div link contactenos -->
-            <div class="div-btn-header">
-            <a class="a-btn-header" href="/user/login">Login</a>
-            </div><!-- div link login -->
+
+            <% if (!locals.logueado) { %>
+                <div class="iconred">
+                    <a href="/user/login"><i class="fa-solid fa-user"></i>
+                </div><!-- div link login -->
+
+            <% }else{ %>
+                <div class="imgUser">
+                    <a href="/user/login"><img src="/images/dbUsers/<%= locals.usuarioLogueado.imagen %>" alt="">
+                </div>
+                
+                
+            <% }; %>
+
             <div class="iconred">
                 <a href="#" target="blank"><i class="fas fa-shopping-cart"></i></i></a>
             </div><!-- div link login -->

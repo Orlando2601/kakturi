@@ -8,7 +8,8 @@ const productsRouter = require('./src/routes/productsRouter');
 const userRouter = require('./src/routes/userRouter');
 const adminRouter = require('./src/routes/adminRouter');
 const methodOverride = require('method-override')
-const logMiddleware = require('./src/middlewares/logMiddleware')
+const userLoggedMiddelware = require('./src/middlewares/userLoggedMiddleware')
+
 const app = express();/* Asignar express a una variable */
 /* /////////////////////////////////////////////////////////////////////////////////// */
 
@@ -26,6 +27,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(methodOverride('_method'));
 /* /////////////////////////////////////////////////////////////////////////////////////////////// */
+app.use(userLoggedMiddelware)
+
 app.set('views', path.resolve(__dirname, './src/views'))
 app.use(express.static(publicPath));/* Expresamos la variable que express debe usar para archivos estáticos */
 /* app.use(logMiddleware) */
