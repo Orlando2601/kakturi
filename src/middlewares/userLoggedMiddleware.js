@@ -14,7 +14,7 @@ function userLoggedMiddelware (req, res, next){
     if (req.session && req.session.usuarioLogueado ){
         res.locals.logueado = true
         res.locals.usuarioLogueado = req.session.usuarioLogueado
-        
+        console.log(res.locals)
     }
 
  
