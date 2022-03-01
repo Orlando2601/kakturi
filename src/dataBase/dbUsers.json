@@ -1,66 +1,20 @@
 [
  {
   "id": 1,
-  "nombre": "orlando",
-  "apellido": "baez",
-  "correo": "admin@gmail.com",
-  "contraseña": "$2a$10$7XURPLS7fSGsK6QbBMnpquKLp7Jww4wp.QzCZUIcB/9zh4HRXrw6G",
-  "imagen": "imagen1644004274525.jpg"
- },
- {
-  "id": 2,
-  "nombre": "vanessa",
-  "apellido": "barrios",
-  "correo": "adminvane@gmail.com",
-  "contraseña": "$2a$10$eW60wsiIR5UhwFJBXJNfhurkLx5hS8hUgW7xMlaDow1/PAvP9vXti",
-  "imagen": "imagen1644004347771.jpg"
- },
- {
-  "id": 3,
-  "nombre": "agueda",
-  "apellido": "corredor",
-  "correo": "corredor@gmail.com",
-  "contraseña": "$2a$10$6B09o8BW1UyuKuxLgAUyueLLMv0EvclivlU4kWeIo9cxDiAYVC6IS",
-  "imagen": "imagen1644979484561.png"
- },
- {
-  "id": 4,
-  "nombre": "cddd",
-  "apellido": "ssssss",
-  "correo": "kjbdk@gmail.com",
-  "contraseña": "$2a$10$jMgKedg8X9.PoJFz0BetWeKJpwBlVpMfRkBvRBaOr56IA1LPXbUc2",
-  "imagen": "imagen1645123747360.png"
- },
- {
-  "id": 5,
-  "nombre": "rocko",
-  "apellido": "baez",
-  "correo": "rockobaez@gmail.com",
-  "contraseña": "$2a$10$FIPfYfAjYiWpcvFp/f02Vuab0.2Mu.kg5v/DeYiyAvIJ2tApCZpka",
-  "imagen": "imagen1645454055563.png"
- },
- {
-  "id": 6,
   "nombre": "oswar",
   "apellido": "baez",
   "correo": "oswar@gmail.com",
   "contraseña": "$2a$10$Mxvsy5YuLMXVTuAqZUHtL.IaghQ4E/FeFUmfrwNfC9xDZT.IFvn1m",
-  "imagen": "imagen1646011585371.png"
+  "imagen": "imagen1646011585371.png",
+  "tipeUser": "master"
  },
  {
-  "id": 7,
-  "nombre": "Nuevo",
-  "apellido": "Vanessa",
-  "correo": "vane@gail.om",
-  "contraseña": "$2a$10$gTy7rmRTik1BrQq9ozYYqOW6wOnQWgWa681sySqvfYZfNF2BHZun.",
-  "imagen": "imagen1646086430268.jpeg"
- },
- {
-  "id": 8,
-  "nombre": "ossar",
-  "apellido": "aaaaa",
-  "correo": "sssssss@hotmsil.com",
-  "contraseña": "$2a$10$xyybffJqcICa5g74RMxsVuYj01VK..xNQz3WA9OOJMyJm6oeBpvvi",
-  "imagen": "imagen1646087319336.jpeg"
+  "id": 2,
+  "nombre": "admin",
+  "apellido": "admin",
+  "correo": "admin@cacturi.com",
+  "contraseña": "$2a$10$B94K2acBKFvYIfwD7GFCOuINHdwKg0MAGX7259DqGK80mOVALpsJe",
+  "imagen": "imagen1646151944299.jpg",
+  "tipeUser": "comprador"
  }
 ]
