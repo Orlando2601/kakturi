@@ -3,11 +3,8 @@
     flex-direction: column;
     gap:15px
 }
-.mainMaster form{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
+
+
 .mainMaster form label, p{
     display: flex;
     flex-direction: row;
@@ -26,3 +23,21 @@
 #id{
     display: none;
 }
+
+@media (max-width: 668px) {
+
+.mainMaster form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+}
+}
+@media (min-width: 669px) {
+
+    .mainMaster form{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    }
