@@ -32,7 +32,7 @@ const validaciones = [
     body('descripcion')
         .notEmpty().withMessage('Debes ingresar descripcion'),
     body('precio')
-        .notEmpty().withMessage('No has ingresado precio')
+        .notEmpty().withMessage('No has ingresado precio').isNumeric().withMessage('Debes ingresar valor numerico')
 ]
 
 /* ADMINISTRACION DE RUTAS */
