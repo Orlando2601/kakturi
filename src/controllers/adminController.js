@@ -23,17 +23,22 @@ const adminControllers ={
         ? res.render('admin/nuevoProducto',{errors:errores.mapped(),old:req.body}) 
         : errorsNew = false;
        
-        if (errorsNew === false && req.file && errores.errors.length === 0){
-            let nuevo = {
-                id:newReference + 1,
-                ...req.body,
-                imagen: req.file.filename,
-                colores: arrayColor
-
+        if (errorsNew === false && errores.errors.length === 0){
+            if(req.file ){
+                let nuevo = {
+                    id:newReference + 1,
+                    ...req.body,
+                    imagen: req.file.filename,
+                    colores: arrayColor
+    
+                }
+                productos.push(nuevo)
+                fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '))
+                res.redirect('/') 
+            }else{
+                res.render('admin/nuevoProducto',{errors:errores.mapped(),old:req.body})
             }
-            productos.push(nuevo)
-			fs.writeFileSync(productsFilePath, JSON.stringify(productos, null, ' '))
-			res.redirect('/')    
+             
         }
     },
     eliminar:(req, res)=>{
