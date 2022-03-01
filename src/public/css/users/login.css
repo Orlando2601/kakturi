@@ -66,9 +66,11 @@ margin-top: 20px;
 
 .registro a .btn{
     background-color: #7ca04f;
-    border: transparent;
     padding: 10px;
+    border-radius: 10px;
     margin-top: 5px;
+    font-family: var(--fuente);
+    font-size: var(--font-size-L);
 }
 
 
