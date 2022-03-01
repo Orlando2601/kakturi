@@ -1,0 +1,13 @@
+.mainMaster .usuarios{
+    display: flex;
+    flex-direction: column;
+    gap:15px
+}
+.mainMaster form{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+#id{
+    display: none;
+}

@@ -16,6 +16,8 @@ function userLoggedMiddelware (req, res, next){
         res.locals.usuarioLogueado = req.session.usuarioLogueado
         
     }
+
+ 
     next()
 
 

@@ -16,5 +16,14 @@
   "contraseña": "$2a$10$B94K2acBKFvYIfwD7GFCOuINHdwKg0MAGX7259DqGK80mOVALpsJe",
   "imagen": "imagen1646151944299.jpg",
   "tipeUser": "comprador"
+ },
+ {
+  "id": 3,
+  "nombre": "vanessa",
+  "apellido": "barrios",
+  "correo": "vane@gmail.com",
+  "contraseña": "$2a$10$MzSVUo9LNmSaHkKVOWqIyuDcnGnSjrvVLwAQ788Q072b9yvV2Fjr.",
+  "imagen": "imagen1646158033794.jpeg",
+  "tipeUser": "comprador"
  }
 ]
