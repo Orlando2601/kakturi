@@ -46,5 +46,21 @@
   "correo": "oswar@gmail.com",
   "contraseña": "$2a$10$Mxvsy5YuLMXVTuAqZUHtL.IaghQ4E/FeFUmfrwNfC9xDZT.IFvn1m",
   "imagen": "imagen1646011585371.png"
+ },
+ {
+  "id": 7,
+  "nombre": "Nuevo",
+  "apellido": "Vanessa",
+  "correo": "vane@gail.om",
+  "contraseña": "$2a$10$gTy7rmRTik1BrQq9ozYYqOW6wOnQWgWa681sySqvfYZfNF2BHZun.",
+  "imagen": "imagen1646086430268.jpeg"
+ },
+ {
+  "id": 8,
+  "nombre": "ossar",
+  "apellido": "aaaaa",
+  "correo": "sssssss@hotmsil.com",
+  "contraseña": "$2a$10$xyybffJqcICa5g74RMxsVuYj01VK..xNQz3WA9OOJMyJm6oeBpvvi",
+  "imagen": "imagen1646087319336.jpeg"
  }
 ]

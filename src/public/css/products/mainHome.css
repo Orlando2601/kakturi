@@ -20,6 +20,8 @@
 }
 .mainHome section .imagenSeccion img{
     width: 100%;
+    background-color: white;
+    border-radius: 50%;
 }
 
 /* ESTILOS DE TEXTO */

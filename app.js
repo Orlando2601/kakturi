@@ -8,8 +8,8 @@ const productsRouter = require('./src/routes/productsRouter');
 const userRouter = require('./src/routes/userRouter');
 const adminRouter = require('./src/routes/adminRouter');
 const methodOverride = require('method-override')
+const error404 = require('./src/middlewares/errorMiddleware')
 const userLoggedMiddelware = require('./src/middlewares/userLoggedMiddleware')
-
 const app = express();/* Asignar express a una variable */
 /* /////////////////////////////////////////////////////////////////////////////////// */
 
@@ -45,5 +45,6 @@ app.listen(port, () => { console.log('Servidor corriendo en el puerto' + port);}
 app.use(productsRouter); /* Definimos a express donde buscar las rutas */
 app.use('/user',userRouter)
 app.use('/admin',adminRouter)
+app.use(error404)
 /* ///////////////////////////////////////////////////////////////////////////////////////////// */
 module.exports = app;
