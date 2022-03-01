@@ -4,6 +4,8 @@
     align-items: center;
     gap: 10px;
     margin-bottom: 20px;
+    max-height: fit-content;
+    
    
 }
 .registro .iconoUser i{
