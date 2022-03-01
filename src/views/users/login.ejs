@@ -16,7 +16,7 @@
                 <p id="showError" ><%= errors.correo.msg %></p>
                 <% }; %>
             <label for="contraseña">Ingrese Contraseña</label>
-            <input type="password" name="contraseña" placeholder="Contraseña">
+            <input type="password" name="contraseña" placeholder="Contraseña" minlength="6" maxlength="12">
             <% if (locals.errors && errors.contraseña) { %>
                 <p id="showError" ><%= errors.contraseña.msg %></p>
                 <% }; %>

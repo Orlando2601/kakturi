@@ -35,6 +35,9 @@ const validaciones = [
 const validacionesLog = [
     body('correo').notEmpty().withMessage('Debes ingresar un correo valido'),
     body('contraseña').notEmpty().withMessage('Debes ingresar una contrasenia')
+    .isLength({min:6, max:12}).withMessage('Debe ingresar min 6 y max 12 caracteres')
+        .notEmpty().withMessage('Debes ingresar una contrasenia entre 6 y 12 caracteres')
+        .isAlphanumeric().withMessage('Ingresaste un caracter no valido'),
 ];
 /* ////////////////////////////////////////////////////////////////////////////////////////// */
 /* CONFIGURACION MULTER */
