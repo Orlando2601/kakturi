@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include ('../partials/head') %>
+<body>
+    <%- include ('../partials/header') %> <!-- importando header -->
+    <main class="mainMaster">
+        <section class="usuarios">
+           
+            <% usuarios.forEach(item => { %>
+                <form action="/master" method="POST">
+                  
+                    <input id="id" type="text" name="id" value="<%= item.id %> " readonly >
+                    <p><%= item.correo %></p>
+                    <label for="tipoUser">Tipo Usuario actual <%= item.tipeUser %></label>
+                    <select name="tipoUser" id="tipoUser" placeholder="Cambiar tipo usuario" >
+                    <option selected="true" disabled="disabled">Cambiar tipo de usuario</option>
+                    <option value="comprador">  comprador</option>
+                    <option value="administrador">  administrador</option>
+                    <option value="eliminar">  eliminar</option>
+                    </select>
+                    <input type="submit" value="Cargar Cambios"></input>
+
+                </form>
+            <% }); %><!-- cierre codigo js anterior -->
+
+          
+                
+        </section>
+        
+
+
+
+    </main>
+
+    <%- include ('../partials/footer') %> <!-- importando footer -->
+</body>
+</html>

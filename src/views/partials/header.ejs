@@ -33,12 +33,21 @@
                 </div><!-- div link login -->
 
             <% }else{ %>
+                <% if (locals.usuarioLogueado.tipeUser === 'comprador') { %>
+                    <div class="imgUser">
+                        <a href="/user/cerrarSesion"><img src="/images/dbUsers/<%= locals.usuarioLogueado.imagen %>" alt="">
+                    </div>
+
+      
+                    <% }else{ %>
+
                 <div class="imgUser">
                     <a href="/user/login"><img src="/images/dbUsers/<%= locals.usuarioLogueado.imagen %>" alt="">
                 </div>
+
                 
                 
-            <% }; %>
+            <% }}; %>
 
             <div class="iconred">
                 <a href="#" target="blank"><i class="fas fa-shopping-cart"></i></i></a>

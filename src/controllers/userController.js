@@ -50,7 +50,8 @@ const userController = {
                 id: newReference + 1,
                 ...req.body,
                 contraseña: bcryptjs.hashSync(req.body.contraseña, 10),
-                imagen:req.file.filename
+                imagen:req.file.filename,
+                tipeUser: "comprador"
             }
             delete nuevoUser.repiteContraseña;
             usuarios.push(nuevoUser)
