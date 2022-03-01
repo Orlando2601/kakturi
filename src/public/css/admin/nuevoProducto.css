@@ -8,7 +8,9 @@
     padding: 10px;
 }
 .mainCrearProducto .imagen-edit{
- width: 50%;
+    width: 30%;
+    background-color: white;    
+    border-radius: 50%;
     
 }
 .mainCrearProducto .imagen-edit img{
@@ -19,6 +21,9 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
+}
+.mainCrearProducto form div input{
+ border-radius: 5px;
 }
 .mainCrearProducto h1{
     font-family: var(--fuente);

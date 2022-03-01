@@ -6,6 +6,7 @@
     box-sizing: border-box; /*con esta propiedad definimos que el margin y el padding sean incluidos dentro del tamaño de las cajas*/
 } /* Propiedades generales de Cajas */
 
+
 :root{
     --gris-oscuro: #666;
     --gris-claro: #ebebeb;
@@ -34,4 +35,8 @@
     /*Fuentes descargadas de web*/
     --fuente: 'Yanone Kaffeesatz', sans-serif;
     
+}
+#showError{
+    color: red;
+    font-family: var( --fuente);
 }

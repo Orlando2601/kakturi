@@ -18,6 +18,8 @@
     
 }
 .mainListaProductos article img{
+    background-color: whitesmoke;
+    border-radius: 50%;
     width: 100%;
     height: 100%;
 }

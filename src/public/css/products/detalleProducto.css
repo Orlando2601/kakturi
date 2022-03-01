@@ -7,10 +7,15 @@
 }
 
 .detalleProducto .imagenDetalle{
-    width:50%
+    width:50%;
+    display: flex;
+    justify-content: center;
 }
 .detalleProducto .imagenDetalle img{
-    width: 100%;
+    width: 70%;
+    background-color: white;
+    border-radius: 50%;
+
 }
 
 .detalleProducto .descripcionDetalle {
@@ -33,11 +38,13 @@
 .detalleProducto .descripcionDetalle .formCompra label, h2{
 font-family: var(--fuente);
 font-size: var(--text-lg);
+
     
 }
 .detalleProducto .descripcionDetalle .formCompra label, h3{
     font-family: var(--fuente);
     font-size: var(--text-lg);
+
         
     }
 .detalleProducto .descripcionDetalle .formCompra .listas{
@@ -70,4 +77,11 @@ flex-direction: column;
 #listaColores a{
 width: 25px;
 height: 25px;
+}
+
+#cantidad{
+color: red;
+border-radius: 5px;
+width: 20%;
+height: 20px;
 }
