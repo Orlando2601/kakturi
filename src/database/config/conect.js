@@ -17,7 +17,6 @@ const connection = mysql.createConnection({
 const crearDB = ()=>{
   connection.connect(function(error){
     if(error){
-       console.log(error);
        return (crearTablas())
     }else{
        console.log('Conexion correcta.');

@@ -20,15 +20,27 @@ const crearTablas = ()=>{
 
         connection.connect(function(error){
             if(error){
-               console.log(error)
                return;
             }else{
                console.log('Conexion correcta.');
             }
          });
-            let sql1Productos = "CREATE TABLE Productos(id INT PRIMARY KEY AUTO_INCREMENT, Mascota INT, Raza INT, Categoria INT, Nombre VARCHAR(255) NOT NULL, Tamaño INT NOT NULL, Cantidad INT NOT NULL, Precio INT NOT NULL, Referencia VARCHAR(255) NOT NULL, Imagen VARCHAR(255) NOT NULL) ;";
-            let sql2Usuarios = "CREATE TABLE Usuarios(id INT PRIMARY KEY AUTO_INCREMENT, Nombre VARCHAR(255) NOT NULL, Apellido VARCHAR(255) NOT NULL, Correo VARCHAR(255) NOT NULL, Contraseña VARCHAR(255) NOT NULL, Imagen VARCHAR(255) NOT NULL, id_Carrito INT NOT NULL)"
-            let sql3Carrito = "CREATE TABLE Carrito(id INT PRIMARY KEY AUTO_INCREMENT, id_producto INT NOT NULL, cantidad INT NOT NULL, id_usuario INT NOT NULL, total INT NOT NULL)"
+            let sql1Productos = `CREATE TABLE Productos(
+                id INT PRIMARY KEY AUTO_INCREMENT,
+                nombre VARCHAR(255) NOT NULL,
+                descripcion VARCHAR(255) NOT NULL,
+                imagen VARCHAR(255) NOT NULL,
+                id_material INT NOT NULL,
+                id_color INT NOT NULL)`;
+             
+            let sql2Material = `CREATE TABLE Material(
+                id INT PRIMARY KEY AUTO_INCREMENT,
+                tipo_material VARCHAR(255) NOT NULL)`;
+
+            let sql3Colores = `CREATE TABLE Colores(
+                id INT PRIMARY KEY AUTO_INCREMENT, 
+                color VARCHAR(255) NOT NULL)`;
+
             //let sql4RelacionCarrito = "CREATE TABLE RelacionCarrito(id INT PRIMARY KEY AUTO_INCREMENT, id_producto INT NOT NULL, id_carrito INT NOT NULL)"
             connection.query(sql1Productos, function (err, result) {
                 if(!err){
@@ -42,25 +54,25 @@ const crearTablas = ()=>{
                 }
                 
             })
-            connection.query(sql2Usuarios, function (err, result) {
+            connection.query(sql2Material, function (err, result) {
                 if(!err){
-                    console.log("creada tabla 2 Usuarios")
+                    console.log("creada tabla 2 Material")
                     return
                 }else{
                     if(err.code === 1050){
-                        console.log(' ya exite tabla 2 Usuarios')
+                        console.log(' ya exite tabla 2 Material')
                         return
                     }
                 }
                 
             })
-            connection.query(sql3Carrito, function (err, result) {
+            connection.query(sql3Colores, function (err, result) {
                 if(!err){
-                    console.log("creada tabla 3 Carrito")
+                    console.log("creada tabla 3 Colores")
                     return
                 }else{
                     if(err.code === 1050){
-                        console.log(' ya exite tabla 3 Carrito')
+                        console.log(' ya exite tabla 3 Colores')
                         return
                     }
                 }
