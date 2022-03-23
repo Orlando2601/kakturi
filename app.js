@@ -10,10 +10,11 @@ const adminRouter = require('./src/routes/adminRouter');
 const masterRouter = require('./src/routes/masterRouter');
 const methodOverride = require('method-override')
 const error404 = require('./src/middlewares/errorMiddleware')
+const {crearDB} = require('./src/database/config/conect');
 const userLoggedMiddelware = require('./src/middlewares/userLoggedMiddleware')
 const app = express();/* Asignar express a una variable */
 /* /////////////////////////////////////////////////////////////////////////////////// */
-
+crearDB()
 /* ALMACENAR DATOS DE NAVEGACION/////////////////////////////////////////////////////////////////// */
 app.use(session({
     secret:'secreto oswar',
