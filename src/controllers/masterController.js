@@ -1,11 +1,11 @@
 /* IMPORTACION DE MODULOS //////////////////////////////////////////////////////////////*/
 const fs = require('fs');
 const path = require('path')
-const productsFilePath = path.join(__dirname, '../dataBase/dbProductos.json');
+const productsFilePath = path.join(__dirname, '../data/dbProductos.json');
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 const { validationResult, cookie, body } = require('express-validator')
 const bcryptjs = require('bcryptjs')
-const usersFilePath = path.join(__dirname, '../dataBase/dbUsers.json');
+const usersFilePath = path.join(__dirname, '../data/dbUsers.json');
 const usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 
@@ -16,7 +16,7 @@ const masterUser = (req,res)=>{
 }
 
 const updateInfoMaster = (req,res)=>{
-    const usersFilePath = path.join(__dirname, '../dataBase/dbUsers.json');
+    const usersFilePath = path.join(__dirname, '../data/dbUsers.json');
     const usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
     console.log(req.body)
     let accion = req.body.tipoUser;

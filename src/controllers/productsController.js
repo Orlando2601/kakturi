@@ -2,7 +2,7 @@
 const req = require('express/lib/request');
 const fs = require('fs');
 const path = require('path')
-const productsFilePath = path.join(__dirname, '../dataBase/dbProductos.json');
+const productsFilePath = path.join(__dirname, '../data/dbProductos.json');
 const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
 /* /////////////////////////////////////////////////////////////////////////////////// */
 /* CONTROLADOR DE LA RUTA PRODUCTS ///////////////////////////////////////////////////////*/

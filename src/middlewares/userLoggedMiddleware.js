@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const usersFilePath = path.join(__dirname, '../dataBase/dbUsers.json');
+const usersFilePath = path.join(__dirname, '../data/dbUsers.json');
 const usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
 
 function userLoggedMiddelware (req, res, next){
