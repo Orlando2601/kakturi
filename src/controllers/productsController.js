@@ -17,7 +17,8 @@ const productsControllers ={
                 const lista =await  db.Producto.findAll({
                     include: ['material']
                 })
-                return res.render('products/products',{lista}) //res.json(lista);
+               
+                 return res.render('products/products',{lista}) //res.json(lista);
             } catch (error) {
                 console.log(error)
             }
