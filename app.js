@@ -1,6 +1,7 @@
 /* REQUERIMIENTO DE MODULOS ///////////////////////////////////////////////////////////////////////////// */
 const express = require('express');
 const path = require('path');
+const {crearDB} = require('./src/database/config/conect');
 const publicPath = path.resolve(__dirname, './src/public');
 const session = require('express-session')
 const cookies = require('cookie-parser')
@@ -10,7 +11,7 @@ const adminRouter = require('./src/routes/adminRouter');
 const masterRouter = require('./src/routes/masterRouter');
 const methodOverride = require('method-override')
 const error404 = require('./src/middlewares/errorMiddleware')
-const {crearDB} = require('./src/database/config/conect');
+
 const userLoggedMiddelware = require('./src/middlewares/userLoggedMiddleware')
 const app = express();/* Asignar express a una variable */
 /* /////////////////////////////////////////////////////////////////////////////////// */

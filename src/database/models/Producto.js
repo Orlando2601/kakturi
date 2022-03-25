@@ -7,10 +7,10 @@ module.exports = (sequelize, dataTypes)=>{
             
         },
         nombre:{
-            type: dataTypes.INTEGER
+            type: dataTypes.STRING
         },
         descripcion:{
-            type: dataTypes.INTEGER
+            type: dataTypes.STRING
         },
         id_color:{
             type:dataTypes.INTEGER
