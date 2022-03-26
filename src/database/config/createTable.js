@@ -20,20 +20,31 @@ const crearTablas = ()=>{
                 precio INT NOT NULL,
                 imagen VARCHAR(255) NOT NULL,
                 id_material INT NOT NULL,
-                id_color INT NOT NULL)`;        
+                colores VARCHAR(255) NOT NULL)`;        
              
     const sql2Material = `CREATE TABLE Material(
                 id INT PRIMARY KEY AUTO_INCREMENT,
                 tipo_material VARCHAR(255) NOT NULL)`;
 
-    const sql3Colores = `CREATE TABLE Colores(
-                id INT PRIMARY KEY AUTO_INCREMENT, 
-                color VARCHAR(255) NOT NULL)`;
-    const sql4LlenarTabla = `INSERT INTO Productos (id, nombre, descripcion, precio, imagen, id_material, id_color) 
+    
+    const sql3LlenarTabla = `INSERT INTO Productos (id, nombre, descripcion, precio, imagen, id_material, colores) 
             VALUES 
-            (1, "dije",  "loco", 1000, "si", 1, 1), 
-            (2, "flor",  "locquito", 2000, "si", 2, 1),  
-            (3, "separador", "locote", 3000, "si", 3, 1)`;  
+            (1, "Dije collar ",  "loco", 1000, "imagen1645022559405.png", 1, "blue, yellow, red"), 
+            (2, "flor",  "locquito", 2000, "imagen1645022732376.png", 2, "blue, yellow, red"),  
+            (4, "separador", "locote", 3000, "imagen1645022792207.png", 3, "blue, yellow, red"),
+            (5, "separador", "locote", 3000, "imagen1645022905514.png", 3, "blue, yellow, red"),
+            (6, "separador", "locote", 3000, "imagen1645023003355.png", 3, "blue, yellow, red"),
+            (7, "separador", "locote", 3000, "imagen1645023179127.png", 3, "blue, yellow, red"),
+            (8, "separador", "locote", 3000, "imagen1645023286353.png", 3, "blue, yellow, red"),
+            (9, "separador", "locote", 3000, "imagen1645024326484.png", 3, "blue, yellow, red")`;  
+   
+    const sql4LlenarTablaMaterial = `INSERT INTO Material (id, tipo_material) 
+    VALUES 
+        (1, "Acero"),
+        (2, "Rodio"),
+        (3, "Golfield"),
+        (4, "Plastico"),
+        (5, "Cristal")`;
 
             connection.query((sql1Productos),(err, result) =>{
                 if(!err){
@@ -56,19 +67,9 @@ const crearTablas = ()=>{
                 }
             });
 
-            connection.query(sql3Colores, function (err, result) {
-                if(!err){
-                    console.log("creada tabla 3 Colores");
-                    
-                }else{
-                    if(err.code === 1050){
-                        console.log(' ya exite tabla 3 Colores');
-                    }
-                }
-                
-            });
+           
             
-            connection.query(sql4LlenarTabla, function (err, result) {
+            connection.query(sql3LlenarTabla, function (err, result) {
                 if(!err){
                     console.log("Llenado de tabla Productos OK");
                 }else{
@@ -77,6 +78,20 @@ const crearTablas = ()=>{
                     }
                 }
             });
+
+            connection.query(sql4LlenarTablaMaterial, function (err, result) {
+                if(!err){
+                    console.log("Llenado de tabla material ok");
+                }else{
+                    if(err.code){
+                        console.log(err);
+                    }
+                }
+            });
+
+            
+
+           
             
             connection.end();
 }

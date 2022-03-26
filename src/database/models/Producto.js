@@ -12,12 +12,15 @@ module.exports = (sequelize, dataTypes)=>{
         descripcion:{
             type: dataTypes.STRING
         },
-        id_color:{
-            type:dataTypes.INTEGER
+        precio:{
+            type: dataTypes.INTEGER
         },
         imagen:{
             type:dataTypes.STRING,
             allowNull: false
+        },
+        colores:{
+            type:dataTypes.INTEGER
         },
         id_material:{
             type:dataTypes.INTEGER
@@ -38,7 +41,11 @@ module.exports = (sequelize, dataTypes)=>{
         Producto.belongsTo(models.Material, {
             as: "material",
             foreignKey: "id_material"
-        })
+        });
+
+        
+        
+
     }
     return Producto
 }

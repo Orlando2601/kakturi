@@ -17,7 +17,7 @@ const productsControllers ={
                 const lista =await  db.Producto.findAll({
                     include: ['material']
                 })
-               
+                    //res.json(lista)
                  return res.render('products/products',{lista}) //res.json(lista);
             } catch (error) {
                 console.log(error)
@@ -30,11 +30,22 @@ const productsControllers ={
         home: (req,res)=>{
             res.render('products/home')
         },
-        detalle: (req,res)=>{
-            let id = req.params.id;
+        detalle: async(req,res)=>{
+            const id = req.params.id;
+            const detalle = await db.Producto.findByPk(id,{include : ['material']});
+            const {colores} = detalle
+            const arrayColor = (colores.replace(/ /g,'')).split(',')
+            console.log(arrayColor)
+                //res.json(detalle)
+            res.render('products/detalleProducto', {lista: detalle, arrayColor});
+                
+
+
+
+/*             let id = req.params.id;
             let lista = productos.find(elemento => elemento.id == id);
             
-            res.render('products/detalleProducto', {lista})
+            res.render('products/detalleProducto', {lista}) */
         },
         prueba: (req,res)=>{
             res.render('prueba')
