@@ -9,7 +9,7 @@
         </section>
         <section class="descripcionDetalle">
             <form class="formCompra" action="comprar">
-                <h2><%= lista.titulo %></h2>
+                <h2><%= lista.nombre %></h2>
                 <h3><%= lista.descripcion %></h3>
                 <label for="precio">$<%= lista.precio %></label>
                 <input type="hidden" name="precio" value="<%= lista.precio %>">
@@ -21,7 +21,7 @@
                 <div id="detalleColor">
                     <label for="colores">Colores disponibles:</label>
                     <div id="listaColores">
-                        <% lista.colores.forEach(color => {  %>
+                        <% arrayColor.forEach(color => {  %>
                             <a href="#" style="background-color:<%= color %>;" ></a>
                         <% } ) %>
                     </div>
