@@ -7,6 +7,8 @@ const { validationResult, cookie, body } = require('express-validator')
 const bcryptjs = require('bcryptjs')
 const usersFilePath = path.join(__dirname, '../data/dbUsers.json');
 const usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+const db = require('../database/models');
+
 /* /////////////////////////////////////////////////////////////////////////////////// */
 /* CONTROLADOR DE LA RUTA USER ///////////////////////////////////////////////////////*/
 const userController = {
@@ -68,11 +70,23 @@ const userController = {
     admin:(req, res)=>{
         res.send('hola admin' + req.query.user)
     },
-    adminPerfil:(req,res)=>{
-        res.render('admin/adminPerfil',{
+    adminPerfil:async(req,res)=>{
+        try {
+            const lista = await  db.Producto.findAll({include: ['material']});
+            
+            res.render('admin/adminPerfil',{
+                user: req.session.usuarioLogueado,
+                lista});
+
+        } catch (error) {
+            console.log(error)
+        }
+
+
+        /* res.render('admin/adminPerfil',{
             user: req.session.usuarioLogueado,
             lista: productos
-        })
+        }) */
 
         
     },

@@ -28,6 +28,15 @@
                 <p id="showError"><%= errors.descripcion.msg%></p>             
             <% }%>
             <div>
+                <label for="material">Material</label>
+                <input type="text" id="material" name="material"  placeholder="Ingrese material de producto" value="<%= locals.old && old.material ? old.material : '' %>">
+               
+            
+            </div>
+            <% if(locals.errors && errors.material){ %>                   
+                <p id="showError"><%= errors.material.msg%></p>             
+            <% }%>
+            <div>
                 <label for="precio">Precio</label>
                 <input type="text" id="precio" name="precio" placeholder="Ingrese cantidad disponible" value="<%= locals.old && old.precio ? old.precio : '' %>">
                
@@ -37,9 +46,12 @@
             <% }%>
             <div>
                 <label for="colores">Colores</label>
-                <input type="text" id="colores" name="colores" placeholder="Ingrese colores disponibles" >
+                <input type="text" id="colores" name="colores" placeholder="Ingrese colores disponibles" value="<%= locals.old && old.colores ? old.colores : '' %>">
 
             </div>
+            <% if(locals.errors && errors.colores){ %>                   
+                <p id="showError"><%= errors.colores.msg%></p>             
+            <% }%>
             <div>
                 <label for="imagen">Imagen de descripción</label>
                 <input type="file" id="imagen" name="imagen" placeholder="Ingrese imagen de referencia" >

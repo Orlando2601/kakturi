@@ -31,6 +31,10 @@ const validaciones = [
         .notEmpty().withMessage('Debes ingresar nombre de producto'),
     body('descripcion')
         .notEmpty().withMessage('Debes ingresar descripcion'),
+        body('material')
+        .notEmpty().withMessage('Debes ingresar material de producto'),
+        body('colores')
+        .notEmpty().withMessage('Debes ingresar colores separados por [ , ]'),
     body('precio')
         .notEmpty().withMessage('No has ingresado precio').isNumeric().withMessage('Debes ingresar valor numerico')
 ]

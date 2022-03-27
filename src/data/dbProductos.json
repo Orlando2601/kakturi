@@ -1,11 +1,14 @@
 [
  {
-  "id": 1,
-  "titulo": "Hoja",
-  "descripcion": "Dije rodio tipo hoja, 8 mm",
-  "precio": "4500",
+  "id": "1",
+  "titulo": "Dije collar ",
+  "descripcion": "loco",
+  "precio": "1000",
   "colores": [
-   "green"
+   "blue",
+   "yellow",
+   "red",
+   "black"
   ],
   "imagen": "imagen1645022792207.png"
  },
@@ -68,5 +71,18 @@
    "gold"
   ],
   "imagen": "imagen1645024509697.png"
+ },
+ {
+  "id": 7,
+  "titulo": "a",
+  "descripcion": "a",
+  "material": "a",
+  "precio": "555",
+  "colores": [
+   "red",
+   "blue",
+   "black"
+  ],
+  "imagen": "imagen1648389591940.jpg"
  }
 ]
