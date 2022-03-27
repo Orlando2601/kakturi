@@ -43,7 +43,7 @@ const validaciones = [
 router.get('/nuevo', notLogMiddleware, adminController.nuevo);
 router.post('/nuevo',multerImageMidleware, validaciones, adminController.guardarNuevo)
 router.get('/editar/:id',notLogMiddleware, adminController.editar)
-router.patch('/editar/:id',multerImageMidleware, adminController.editarGuardar)
+router.patch('/editar/:id',multerImageMidleware,validaciones, adminController.editarGuardar)
 router.delete('/eliminar/:id', adminController.eliminar)
 /* //////////////////////////////////////////////////////////////////////// */
 module.exports = router;
