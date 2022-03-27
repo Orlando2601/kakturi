@@ -11,7 +11,7 @@
         <form action="/admin/editar/<%= toEdit.id %>?_method=patch" method="POST" enctype="multipart/form-data" > <!-- enctype="multipart/form-data"> --> <!-- Usar esta config cuando se va a subir imagenes en el form sino se puede quitar el elemento o configurar  enctype="application/x-www-form-urlencoded"  para solo texto -->            
             <div>
                 <label for="titulo">Nombre</label>
-                <input type="text" id="titulo" name="titulo"  value="<%= toEdit.titulo %>"  >
+                <input type="text" id="titulo" name="titulo"  value="<%= toEdit.nombre %>"  >
             </div>
             <div>
                 <label for="descripcion">Descripción</label>
@@ -24,7 +24,7 @@
 
             <div>
                 <label for="colores">Colores</label>
-                 <input type="text" id="colores" name="colores" value="<%= toEdit.colores.join(', ') %>" >
+                 <input type="text" id="colores" name="colores" value="<%= toEdit.colores%>" >
             </div>
             <div>
                 <label for="imagen">Imagen de descripción</label>

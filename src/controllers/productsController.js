@@ -36,20 +36,8 @@ const productsControllers ={
             const {colores} = detalle
             const arrayColor = (colores.replace(/ /g,'')).split(',')
             console.log(arrayColor)
-                //res.json(detalle)
             res.render('products/detalleProducto', {lista: detalle, arrayColor});
-                
-
-
-
-/*             let id = req.params.id;
-            let lista = productos.find(elemento => elemento.id == id);
-            
-            res.render('products/detalleProducto', {lista}) */
-        },
-        prueba: (req,res)=>{
-            res.render('prueba')
-        },
+        }
 }
 /* /////////////////////////////////////////////////////////////////////////////////// */
 module.exports = productsControllers;
