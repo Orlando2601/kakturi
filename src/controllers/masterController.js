@@ -1,49 +1,51 @@
 /* IMPORTACION DE MODULOS //////////////////////////////////////////////////////////////*/
-const fs = require('fs');
-const path = require('path')
-const productsFilePath = path.join(__dirname, '../data/dbProductos.json');
-const productos = JSON.parse(fs.readFileSync(productsFilePath, 'utf-8'));
-const { validationResult, cookie, body } = require('express-validator')
-const bcryptjs = require('bcryptjs')
-const usersFilePath = path.join(__dirname, '../data/dbUsers.json');
-const usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
+const db = require('../database/models');
 
 
-const masterUser = (req,res)=>{
-            res.render('master/master.ejs',{usuarios})
-
-
+const masterUser = async(req,res)=>{
+            try {
+                const listaUsuarios = await db.Usuario.findAll({
+                    include: ['tipouser']
+                });
+                return res.render('master/master.ejs',{usuarios:listaUsuarios});
+            } catch (error) {
+                console.log(error)
+            }      
 }
 
-const updateInfoMaster = (req,res)=>{
-    const usersFilePath = path.join(__dirname, '../data/dbUsers.json');
-    const usuarios = JSON.parse(fs.readFileSync(usersFilePath, 'utf-8'));
-    console.log(req.body)
+const updateInfoMaster = async(req,res)=>{
     let accion = req.body.tipoUser;
     let idUser = parseInt(req.body.id)
-    
-    console.log(accion)
     if(accion === 'eliminar'){
-    
-        usuarios.splice((idUser - 1), 1);
-        usuarios.forEach((element, index) => {
-            element.id = index + 1
-        });
-        fs.writeFileSync(usersFilePath, JSON.stringify(usuarios, null, ' '))
+        try {
+            await db.Usuario.destroy({where:{id:idUser}});
+        } catch (error) {
+            console.log(error)
+        }
     }
     if(accion === 'comprador'){
-        let toEdit = usuarios.find(element => element.id == idUser);
-        toEdit.tipeUser = 'comprador'
-        usuarios[idUser -1] = toEdit
-        fs.writeFileSync(usersFilePath, JSON.stringify(usuarios, null, ' '))
+        try {
+            await db.Usuario.update({id_tipoUser:3},{where:{id:idUser}})
+        } catch (error) {
+            console.log(error)
+        }
+
     }
     if(accion === 'administrador'){
-        let toEdit = usuarios.find(element => element.id == idUser);
-        toEdit.tipeUser = 'administrador'
-        usuarios[idUser -1] = toEdit
-        fs.writeFileSync(usersFilePath, JSON.stringify(usuarios, null, ' '))
+        try {
+            await db.Usuario.update({id_tipoUser:2},{where:{id:idUser}})
+        } catch (error) {
+            console.log(error)
+        }
     }
-    res.render('master/master.ejs',{usuarios})
+    if(accion === 'master'){
+        try {
+            await db.Usuario.update({id_tipoUser:1},{where:{id:idUser}})
+        } catch (error) {
+            console.log(error)
+        }
+    }
+    return res.redirect("/user/adminPerfil")
 }
 
 module.exports ={

@@ -11,12 +11,13 @@
                   
                     <input id="id" type="text" name="id" value="<%= item.id %> " readonly >
                     <p><%= item.correo %></p>
-                    <label for="tipoUser">Tipo Usuario actual <%= item.tipeUser %></label>
+                    <label for="tipoUser">Tipo Usuario actual <%= item.tipouser.tipo_user %></label>
                     <select name="tipoUser" id="tipoUser" placeholder="Cambiar tipo usuario" >
                     <option selected="true" disabled="disabled">Cambiar tipo de usuario</option>
                     <option value="comprador">  comprador</option>
                     <option value="administrador">  administrador</option>
                     <option value="eliminar">  eliminar</option>
+                    <option value="master">  master</option>
                     </select>
                     <input id="crearProducto" type="submit" value="Cargar Cambios"></input>
 

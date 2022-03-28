@@ -101,10 +101,17 @@ const crearTablas = ()=>{
                 id INT PRIMARY KEY AUTO_INCREMENT,
                 tipo_user VARCHAR(255) NOT NULL)`; 
             
-/*             const sql7LlenarTablaUsuarios=`INSERT INTO Usuarios (id, nombre, apellido, correo, contrasenia, imagen, id_tipoUser) 
+            const sql7LlenarTablaUsuarios=`INSERT INTO Usuarios (id, nombre, apellido, correo, contrasenia, imagen, id_tipoUser) 
             VALUES 
-            (1, masterAdmin, main, admin@gmail.com, "imagen1645022559405.png", 1, "blue, yellow, red"), 
-            `; */
+            (1, "Admin", "Master", "adminmaster@cacturi.com", "$2a$10$BrprotO/cVqNsyZ4XlIn3O1jg8gxOZrAq3oRWQM1R7Ze9wL.iO4ci", "imagen1648490573763.png", 1),
+            (2, "oswar", "baez", "oswar@gmail.com", "$2a$10$BrprotO/cVqNsyZ4XlIn3O1jg8gxOZrAq3oRWQM1R7Ze9wL.iO4ci", "imagen1648490573763.png", 2),
+            (3, "orlando", "corredor", "orlando@gmail.com", "$2a$10$BrprotO/cVqNsyZ4XlIn3O1jg8gxOZrAq3oRWQM1R7Ze9wL.iO4ci", "imagen1648490573763.png", 3)`; 
+
+            const sql8LlenarTablaTipoUsuario = `INSERT INTO TipoUser (id, tipo_user) 
+            VALUES 
+                (1, "master"),
+                (2, "admin"),
+                (3, "comprador")`;
 
             connection.query(sql5Usuarios, function (err, result) {
                     if(!err){
@@ -123,8 +130,25 @@ const crearTablas = ()=>{
                             console.log(err);
                         }
                     }
-                });    
-           
+                });   
+                connection.query(sql7LlenarTablaUsuarios, function (err, result) {
+                    if(!err){
+                        console.log("Llenado de tabla usuario ok");
+                    }else{
+                        if(err.code){
+                            console.log(err);
+                        }
+                    }
+                }); 
+                connection.query(sql8LlenarTablaTipoUsuario, function (err, result) {
+                    if(!err){
+                        console.log("Llenado de tabla tipo usuario ok");
+                    }else{
+                        if(err.code){
+                            console.log(err);
+                        }
+                    }
+                }); 
             
             connection.end();
 }

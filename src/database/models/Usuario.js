@@ -3,8 +3,7 @@ module.exports = (sequelize, dataTypes)=>{
     let cols = {
         id: {
             type: dataTypes.INTEGER,
-            primaryKey: true,
-            allowNull: false
+            primaryKey: true
         },
         nombre:{
             type: dataTypes.STRING,
@@ -43,8 +42,8 @@ module.exports = (sequelize, dataTypes)=>{
     const Usuario = sequelize.define(alias, cols, config);
 
     Usuario.associate = function (models) {
-        Usuario.belongsTo(models.TipoUser, {
-            as: "tipoUser",
+        Usuario.belongsTo(models.Tipouser, {
+            as: "tipouser",
             foreignKey: "id_tipoUser"
         });
 

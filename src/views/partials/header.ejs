@@ -33,7 +33,7 @@
                 </div><!-- div link login -->
 
             <% }else{ %>
-                <% if (locals.usuarioLogueado.tipeUser === 'comprador') { %>
+                <% if (locals.usuarioLogueado.id_tipoUser === 3) { %>
                     <div class="imgUser">
                         <a href="/user/cerrarSesion"><img src="/images/dbUsers/<%= locals.usuarioLogueado.imagen %>" alt="">
                     </div>
