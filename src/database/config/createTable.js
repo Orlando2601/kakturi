@@ -66,8 +66,7 @@ const crearTablas = ()=>{
                     }
                 }
             });
-
-           
+          
             
             connection.query(sql3LlenarTabla, function (err, result) {
                 if(!err){
@@ -89,8 +88,42 @@ const crearTablas = ()=>{
                 }
             });
 
+            const sql5Usuarios = `CREATE TABLE Usuarios(
+                id INT PRIMARY KEY AUTO_INCREMENT,
+                nombre VARCHAR(255) NOT NULL,
+                apellido VARCHAR(255) NOT NULL,
+                correo VARCHAR(255) NOT NULL,
+                contrasenia VARCHAR(255) NOT NULL,
+                imagen VARCHAR(255) NOT NULL,
+                id_tipoUser INT NOT NULL)`;
+          
+            const sql6TipoUser = `CREATE TABLE TipoUser(
+                id INT PRIMARY KEY AUTO_INCREMENT,
+                tipo_user VARCHAR(255) NOT NULL)`; 
             
+/*             const sql7LlenarTablaUsuarios=`INSERT INTO Usuarios (id, nombre, apellido, correo, contrasenia, imagen, id_tipoUser) 
+            VALUES 
+            (1, masterAdmin, main, admin@gmail.com, "imagen1645022559405.png", 1, "blue, yellow, red"), 
+            `; */
 
+            connection.query(sql5Usuarios, function (err, result) {
+                    if(!err){
+                        console.log("Tabla Usuarios creada con exito");
+                    }else{
+                        if(err.code){
+                            console.log(err);
+                        }
+                    }
+                });
+            connection.query(sql6TipoUser, function (err, result) {
+                    if(!err){
+                        console.log("Tabla Tipo usuarios creada con exito");
+                    }else{
+                        if(err.code){
+                            console.log(err);
+                        }
+                    }
+                });    
            
             
             connection.end();
