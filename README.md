@@ -2,6 +2,10 @@
 ######  Market place to jewelry supplies. Make your self and improve your art and design. Natural stones, terminals gold and silver steel. 
 ###### By Oswar Baez
 
+##### Abrir la terminal dentro de la carpeta donde vamos a ejecutar el proyecto y escribir git clone https://github.com/Orlando2601/kakturi.git
+
+##### Si no estamos dentro de la carpeta escribimos cd kakturi en la terminal y abrimos visual studio code para ingresar y ejecutamos los siguientes pasos
+
 ###### Paso 1 En la terminal ejecutar npm instal
 ###### Paso 2 Una vez termine de instalar nos dirigimos a cambiar user y password de la base de datos segun tengamos en nuestro ordenador, ingresando con ctrl + click sobre el link de abajop nos dirige al archivo de configuracion donde debemos cambiar {"username": "root", "password": ".."} del objeto como se muestra acontinuacion
  "development": {
