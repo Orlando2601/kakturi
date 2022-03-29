@@ -17,20 +17,21 @@ const productsControllers ={
             }
         },
         home: (req,res)=>{
+           console.log(res.locals.pruebas)
             res.render('products/home')
         },
         detalle: async(req,res)=>{
             try {
                 const id = req.params.id;
                 const detalle = await db.Producto.findByPk(id,{include : ['material']});
-                const {colores} = detalle
-                const arrayColor = await (colores.replace(/ /g,'')).split(',')
-                
-                return res.render('products/detalleProducto', {lista: detalle, arrayColor});
+                const {colores} = detalle;
+                const arrayColor = (colores.replace(/ /g,'')).split(',')
+                return res.render('products/detalleProducto', {lista:detalle, arrayColor});
             } catch (error) {
                 console.log(error)
             }
             
         }
+        
 }
 module.exports = productsControllers;
