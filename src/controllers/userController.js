@@ -18,7 +18,6 @@ const userController = {
             !user ? res.render('users/login',{errors:{correo:{msg:'No se encontro el correo'}}}) : validacionPassword =  bcryptjs.compareSync(req.body.contraseña, user.contrasenia);
             !validacionPassword ? res.render('users/login',{errors:{contraseña:{msg:"Tu contrasena no coincide"}}}): delete user.contraseña; req.session.usuarioLogueado = user;
             req.body.recordame ? res.cookie('correo', req.body.correo,{maxAge:60000*60*12}): res.redirect('/admin/adminPerfil');
-            console.log(user)
             return res.redirect('/user/adminPerfil');
         } catch (error) {
             console.log(error)

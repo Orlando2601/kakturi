@@ -22,7 +22,7 @@ const adminControllers ={
                     const {titulo, descripcion, material, precio,colores} = req.body
                     const materiales = await db.Material.findOne({where:{tipo_material: material}});
                     const nuevoTamanioMaterial = await db.Material.findAndCountAll();
-                    console.log(nuevoTamanioMaterial.count)
+                    
                      let LibreMaterial = new Boolean()
                     !materiales ?
                     LibreMaterial = true 
@@ -89,7 +89,6 @@ const adminControllers ={
         if (errorsNew === false && errores.errors.length === 0){
             try {
                 const {titulo, descripcion, material, precio,colores, imagen} = req.body
-                console.log(req.body)
                 const materiales = await db.Material.findOne({where:{tipo_material: material}});
                 const nuevoTamanioMaterial = await db.Material.findAndCountAll();
                 let LibreMaterial = new Boolean()
