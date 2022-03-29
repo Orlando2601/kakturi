@@ -20,7 +20,7 @@ module.exports = (sequelize, dataTypes)=>{
             allowNull: false
         },
         colores:{
-            type:dataTypes.INTEGER
+            type:dataTypes.STRING
         },
         id_material:{
             type:dataTypes.INTEGER

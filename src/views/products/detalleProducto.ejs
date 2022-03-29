@@ -13,7 +13,8 @@
                 <h3><%= lista.descripcion %></h3>
                 <label for="precio">$<%= lista.precio %></label>
                 <input type="hidden" name="precio" value="<%= lista.precio %>">
-
+                <label for="material"><%= lista.material.tipo_material %></label>
+                <input type="hidden" name="precio" value="<%= lista.material.tipo_material %>">
                 <div class="listas">
                     <label for="cantidad">Cantidad:</label>
                     <input type="number" class="cantidad" name="cantidad" id="cantidad" min="0">         
@@ -28,7 +29,8 @@
 
                     
                 </div>
-                   <input id="crearProducto" type="submit" name="comprar" value="Añadir Carrito">
+                <a id="crearProducto" href="#">Anadir carrito</a>
+                
             </form> <!-- formulario de aceptacion de compra -->
                         
            
