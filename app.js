@@ -9,6 +9,7 @@ const productsRouter = require('./src/routes/productsRouter');
 const userRouter = require('./src/routes/userRouter');
 const adminRouter = require('./src/routes/adminRouter');
 const masterRouter = require('./src/routes/masterRouter');
+const usersApiRouter = require('./src/routes/usersApiRouter')
 const methodOverride = require('method-override')
 const error404 = require('./src/middlewares/errorMiddleware')
 
@@ -49,6 +50,7 @@ app.use(productsRouter); /* Definimos a express donde buscar las rutas */
 app.use('/user',userRouter)
 app.use('/admin',adminRouter)
 app.use(masterRouter)
+app.use('/api', usersApiRouter)
 app.use(error404)
 /* ///////////////////////////////////////////////////////////////////////////////////////////// */
 module.exports = app;
