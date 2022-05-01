@@ -41,7 +41,7 @@ app.set('view engine', 'ejs'); /* Expresamos a express motor de vistas como ejs 
 /* /////////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* CONFIGURACION PUERTO Y SERVIDOR///////////////////////////////////////////////////////////////// */
-const port = process.env.PORT || 3000; /* Definimos la configuración del puerto en la variable port */
+const port = process.env.PORT || 3001; /* Definimos la configuración del puerto en la variable port */
 app.listen(port, () => { console.log('Servidor corriendo en el puerto' + port);});/* Abrimos puerto para visualizar /tambien es la configuración de heroku*/
 /* //////////////////////////////////////////////////////////////////////////////////// */
 
