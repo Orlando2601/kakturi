@@ -2,7 +2,7 @@
 @import url(./parametrizacion.css);
 @import url(./header.css);
 @import url(./footer.css);
-@import url(/css/products/mainHome.css);
+@import url(./mainHome.css);
 @import url(/css/products/detalleProducto.css);
 @import url(/css/products/productos.css);
 @import url(/css/users/login.css);

@@ -36,6 +36,13 @@
     --fuente: 'Yanone Kaffeesatz', sans-serif;
     
 }
+
+#btn_usuarios{
+    background-color: var(--verde);
+    border: none;
+    width: 300px;
+}
+
 #showError{
     color: red;
     font-family: var( --fuente);

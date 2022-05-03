@@ -1,54 +1,47 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import ProductosList from "./ProductosList";
 
 class Productos extends Component{
     constructor(){
         super();
         this.state = {
-            usuarios:[]
+            productos:[]
         }
-
     }
+
 
     async componentDidMount(){
-        const response =await fetch("/api/usuarios");
-        const users = await response.json()
-        console.log(users)
+
+        const response = await fetch("/api/productos");
+        const products = await response.json();
+
         this.setState({
-            usuarios: users.listaUsers
+            productos:products.lista
         })
-    
-        
     }
-    
-    
-    
-        render(){
+
+    render(){
+        return(
+            <>
             
-        
-            return (
-               
-                <React.Fragment>
-                    {
-                        <div className="container overflow-hidden">
-                            <h1>Usuarios</h1>
+                {
+                        <div class="container overflow-hidden">
+                            <h1>Productos</h1>
                         {
-                            this.state.usuarios.map((usuario, index)=>{
-                                return <ProductosList { ...usuario} key={index}/>
+                            this.state.productos.map((producto, index)=>{
+                                return <ProductosList { ...producto} key={index}/>
                             })
                         }
     
                         </div>
                         
                             
-                    }
-                       
-                </React.Fragment>
-                
-            );
-        }
+                }
+            
+            </>
+        );
 
-
+    }
 
 }
 

@@ -1,21 +1,27 @@
 import Header from "./Header";
 import Footer from "./Footer"
-import Productos from "./Productos";
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link,
-  useRouteMatch
-} from "react-router-dom";
+import React from "react";
+import RouterApp from "./routers/RouterApp";
+
 function App(){
     return(
-        <>
+        <React.Fragment>
             <Header/>
-            <h1>hola desde react</h1>
-            <Productos/>
+            
+            <main className="mainHome">
+                <div id="contenedor_botones" className="d-grid gap-2">
+                    <button className="btn btn-primary" id="btn_usuarios" type="button"> <a href="/usuarios">Usuarios</a> </button>
+                    <button className="btn btn-primary" id="btn_usuarios" type="button"><a href="/productos">Productos</a> </button>
+                </div>
+                <RouterApp/>
+                
+               
+            </main>
+            
+           
+            
             <Footer/>
-        </>
+        </React.Fragment>
         
     );
 
