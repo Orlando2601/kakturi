@@ -30,7 +30,7 @@ class Productos extends Component{
                
                 <React.Fragment>
                     {
-                        <div>
+                        <div className="container overflow-hidden">
                             <h1>Usuarios</h1>
                         {
                             this.state.usuarios.map((usuario, index)=>{
