@@ -8,59 +8,72 @@
             <i class="fas fa-cubes"></i>
         </div><!-- icono superior de la vista -->
         <h1>Complete los datos del nuevo producto</h1>
-        <form action="/admin/nuevo" method="POST"  enctype="multipart/form-data" > <!-- enctype="multipart/form-data"> --> <!-- Usar esta config cuando se va a subir imagenes en el form sino se puede quitar el elemento o configurar  enctype="application/x-www-form-urlencoded"  para solo texto -->
+        <form action="/admin/nuevo" method="POST"  id="formCrearProducto" enctype="multipart/form-data" > <!-- enctype="multipart/form-data"> --> <!-- Usar esta config cuando se va a subir imagenes en el form sino se puede quitar el elemento o configurar  enctype="application/x-www-form-urlencoded"  para solo texto -->
             
             <div>
                 <label for="titulo">Nombre</label>
                 <input type="text" id="titulo" name="titulo"  placeholder="Ingrese nombre de producto" value="<%= locals.old && old.titulo ? old.titulo : '' %>">
                
             </div>
+            <p class="errorForm" id="errorTitulo"></p>
             <% if(locals.errors && errors.titulo){ %>                   
-                <p id="showError"><%= errors.titulo.msg%></p>             
+                <p class="errorForm" id="showError"><%= errors.titulo.msg%></p>             
             <% }%>
+
+
             <div>
                 <label for="descripcion">Descripción</label>
                 <input type="text" id="descripcion" name="descripcion"  placeholder="Ingrese descripcion de producto" value="<%= locals.old && old.descripcion ? old.descripcion : '' %>">
                
-            
             </div>
+            <p class="errorForm" id="errorDescripcion"></p>
             <% if(locals.errors && errors.descripcion){ %>                   
-                <p id="showError"><%= errors.descripcion.msg%></p>             
+                <p class="errorForm" id="showError"><%= errors.descripcion.msg%></p>             
             <% }%>
+
             <div>
                 <label for="material">Material</label>
                 <input type="text" id="material" name="material"  placeholder="Ingrese material de producto" value="<%= locals.old && old.material ? old.material : '' %>">
-               
-            
+
             </div>
+            <p class="errorForm" id="errorMaterial"></p>
             <% if(locals.errors && errors.material){ %>                   
-                <p id="showError"><%= errors.material.msg%></p>             
+                <p class="errorForm" id="showError"><%= errors.material.msg%></p>             
             <% }%>
+
+
             <div>
                 <label for="precio">Precio</label>
                 <input type="text" id="precio" name="precio" placeholder="Ingrese cantidad disponible" value="<%= locals.old && old.precio ? old.precio : '' %>">
                
             </div>
+            <p class="errorForm" id="errorPrecio"></p>
+
             <% if(locals.errors && errors.precio){ %>                   
-                <p id="showError"><%= errors.precio.msg%></p>             
+                <p class="errorForm" id="showError"><%= errors.precio.msg%></p>             
             <% }%>
+
             <div>
                 <label for="colores">Colores</label>
                 <input type="text" id="colores" name="colores" placeholder="Ingrese colores disponibles" value="<%= locals.old && old.colores ? old.colores : '' %>">
 
             </div>
+            <p class="errorForm" id="errorColores"></p>
+
             <% if(locals.errors && errors.colores){ %>                   
-                <p id="showError"><%= errors.colores.msg%></p>             
+                <p class="errorForm" id="showError"><%= errors.colores.msg%></p>             
             <% }%>
             <div>
                 <label for="imagen">Imagen de descripción</label>
                 <input type="file" id="imagen" name="imagen" placeholder="Ingrese imagen de referencia" >
             </div>
+            <p class="errorForm" id="errorImgProducto"></p>
             <div id="guardar">
                 <input id="crearProducto" type="submit" value="Guardar">
             </div><!-- caja que contiene el boton de guardar -->
         </form><!-- formulario de registro del nuevo producto -->
     </main>
+    <script src="../../js/crearProducto.js"></script>
     <%- include ('../partials/footer') %> <!-- importando footer -->
     </body>
 </html>

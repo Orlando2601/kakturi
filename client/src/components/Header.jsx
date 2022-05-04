@@ -1,9 +1,11 @@
+import {Link} from 'react-router-dom'
+
 function Header(){
     return(
         <>
         <header>
             <div className="caja-logo">
-                <a href="/"><img src="/images/logo cacturinuevo.png"  alt="Logo PuppieShop" /></a>              
+                <Link to="/"><img src="/images/logo cacturinuevo.png"  alt="Logo PuppieShop" /></Link>              
                                 
             </div>
             
