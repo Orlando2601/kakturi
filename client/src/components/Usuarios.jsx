@@ -15,7 +15,8 @@ class Usuarios extends Component{
         const users = await response.json()
         console.log(users)
         this.setState({
-            usuarios: users.listaUsers
+            usuarios: users.listaUsers,
+            cantidad:users.count
         })
     
         
@@ -31,7 +32,7 @@ class Usuarios extends Component{
                 <React.Fragment>
                     {
                         <div class="container overflow-hidden">
-                            <h1>Usuarios</h1>
+                            <h1>Total usuarios registrados {this.state.cantidad}</h1>
                         {
                             this.state.usuarios.map((usuario, index)=>{
                                 return <UsuariosList { ...usuario} key={index}/>

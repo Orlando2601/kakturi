@@ -16,21 +16,33 @@ class Productos extends Component{
         const products = await response.json();
 
         this.setState({
-            productos:products.lista
+            productos:products.lista,
+            cantidad:products.count
         })
+        
     }
-
+    
     render(){
         return(
             <>
             
                 {
-                        <div class="container overflow-hidden">
-                            <h1>Productos</h1>
+                        <div className="container overflow-hidden">
+                            <h1>Total Productos {this.state.cantidad}</h1>
                         {
                             this.state.productos.map((producto, index)=>{
-                                return <ProductosList { ...producto} key={index}/>
+                                return (
+                                    <>
+                                        <ProductosList { ...producto} key={index}/>
+                                        
+                                    </>
+                                    
+                                    
+                                );
+                                
+                                
                             })
+                            
                         }
     
                         </div>

@@ -2,8 +2,8 @@ function UsuariosList(props){
   
     return(
         <>
-            
-            <table className="table table-dark table-hover">
+            <img  className="img-fluid" src={props.imagen} alt="" width="200vw" />
+            <table className="table table-bordered">
                 <thead>
                     <tr>
                     <th scope="col">#</th>

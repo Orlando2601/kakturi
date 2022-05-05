@@ -1,9 +1,19 @@
+
 function ProductosList(props){
   
+
+
+
     return(
         <>
-            
-            <table className="table table-dark table-hover">
+           
+           
+        
+
+
+        
+           <img  className="img-fluid" src={props.imagen} alt="" width="200vw" />
+            <table className="table table-bordered">
                 <thead>
                     <tr>
                     <th scope="col">#</th>
@@ -20,6 +30,7 @@ function ProductosList(props){
                     <td><a href={'http://localhost:3001/api/usuario/'+props.id}>{props.urlDetalleProduct}</a></td>
                     </tr>
                 </tbody>
+                
             </table>
         
         </>

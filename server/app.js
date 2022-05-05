@@ -2,6 +2,7 @@
 const express = require('express');
 const path = require('path');
 const {crearDB} = require('./src/database/config/conect');
+const images = path.resolve(__dirname, './src/public/images');
 const publicPath = path.resolve(__dirname, './src/public');
 const session = require('express-session')
 const cookies = require('cookie-parser')
@@ -36,6 +37,7 @@ app.use(userLoggedMiddelware)
 
 app.set('views', path.resolve(__dirname, './src/views'))
 app.use(express.static(publicPath));/* Expresamos la variable que express debe usar para archivos estáticos */
+app.use(express.static(images));
 /* app.use(logMiddleware) */
 /* CONFIGURACION RENDERIZACION VISTAS //////////////////////////////////////////////////////////////*/
 app.set('view engine', 'ejs'); /* Expresamos a express motor de vistas como ejs */

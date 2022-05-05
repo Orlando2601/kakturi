@@ -8,6 +8,11 @@
     
     
 }
+#imagenReact{
+    width: 30vw;
+    height:30vw;
+}
+
 .mainHome section{
     display: flex;
     flex-direction: row;
