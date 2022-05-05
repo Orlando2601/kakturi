@@ -2,16 +2,16 @@ const db = require('../database/models');
 
 const listaUsuarios  = async(req, res)=>{
         try {
-            const listaUsers = await db.Usuario.findAll({
+            const {rows, count} = await db.Usuario.findAndCountAll({
                 attributes:['id','nombre','correo']
             });
        
-
-            const nuevo =  await listaUsers.forEach(element => {
+                const lastUser = rows[rows.length-1]
+                await rows.forEach(element => {
                 element.dataValues.urlDetalleUser ="http://localhost:3001/api/usuario/"+element.id;
             });
 
-            return res.status(200).json({listaUsers})
+            return res.status(200).json({listaUsers:rows, count, ultimoUsuario:lastUser})
 
             
         } catch (error) {
@@ -26,7 +26,7 @@ const detalleUsuario = async(req, res)=>{
     try {
         const idUser = req.params.id
         const usuario = await db.Usuario.findByPk(idUser,{
-            include:['tipouser']
+            attributes:['id', 'nombre', 'apellido','correo','imagen']
         })
         return res.json({usuario})
     } catch (error) {

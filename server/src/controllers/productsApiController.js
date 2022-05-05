@@ -4,15 +4,16 @@ const db = require('../database/models');
 
 const productsApi = async(req,res)=>{
     try {
-        const lista =await  db.Producto.findAll({
+        const {rows, count} =await  db.Producto.findAndCountAll({
             attributes:['id','nombre','descripcion']
         });
-
-        const detalle =  await lista.forEach(element => {
+        const lastProduct = rows[rows.length-1]
+        await rows.forEach((element, index) => {
             element.dataValues.urlDetalleProduct ="http://localhost:3001/api/producto/"+element.id;
+            
         });
 
-        return res.status(200).json({lista});
+        return res.status(200).json({lista:rows, count, ultimoProducto:lastProduct});
     } catch (error) {
         console.log(error)
     }
