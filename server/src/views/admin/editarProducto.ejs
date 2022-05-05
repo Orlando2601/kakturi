@@ -13,34 +13,46 @@
                 <label for="titulo">Nombre</label>
                 <input type="text" id="titulo" name="titulo"  value="<%= toEdit.nombre %>"  >
             </div>
+            <p class="errorForm" id="errorTitulo"></p>
+
             <div>
                 <label for="descripcion">Descripción</label>
                 <input type="text" id="descripcion" name="descripcion"  value="<%= toEdit.descripcion %>"  >
             </div>
+            <p class="errorForm" id="errorDescripcion"></p>
+
             <div>
                 <label for="precio">Precio</label>
                 <input type="text" id="precio" name="precio" value="<%= toEdit.precio %>"  >
             </div>
+            <p class="errorForm" id="errorPrecio"></p>
+
             <div>
                 <label for="material">Material</label>
                 <input type="text" id="material" name="material"  placeholder="Ingrese material de producto" value="<%= toEdit.material.tipo_material%>">
                
             
             </div>
+            <p class="errorForm" id="errorMaterial"></p>
+
             <div>
                 <label for="colores">Colores</label>
                  <input type="text" id="colores" name="colores" value="<%= toEdit.colores%>" >
             </div>
+            <p class="errorForm" id="errorColores"></p>
+
             <div>
                 <label for="imagen">Imagen de descripción</label>
                 <input  type="file" id="imagen" name="imagen" >
                 <input style="display: none;" id="imagenVieja" name="imagenVieja" type="text" disabled value="<%= toEdit.imagen%>">
             </div><!-- caja de carga de archivos -->
+            
             <div id="guardar">
                 <input id="crearProducto" type="submit" value="Guardar">
             </div> <!-- caja botones -->
         </form><!-- formulario de edicion de productos -->
     </main>
+    <script src="../../js/editarProducto.js"></script>
     <%- include ('../partials/footer') %> <!-- importando footer -->
     </body>
 </html>
