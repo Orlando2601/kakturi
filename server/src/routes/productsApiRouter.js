@@ -1,12 +1,9 @@
 const express = require('express'); /* Importamos modulo express */
 const router = express.Router(); /* Definimos el método Router de express a la variable router para exportarla */
 const path = require('path');
-const {listaUsuarios, detalleUsuario} = require('../controllers/usersApiController')
+const {productsApi, detalleApiProducto} = require('../controllers/productsApiController')
 
-
-
-
-router.get('/usuarios', listaUsuarios);
-router.get('/usuario/:id', detalleUsuario)
+router.get('/productos', productsApi);
+router.get('/producto/:id', detalleApiProducto)
 
 module.exports = router;

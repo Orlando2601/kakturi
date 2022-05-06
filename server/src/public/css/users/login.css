@@ -73,4 +73,14 @@ margin-top: 20px;
     font-size: var(--font-size-L);
 }
 
+#showError{
+    font-family: var(--fuente);
+    font-size: var(--font-size-S);
+    color: red;
+}
+.errorForm {
+    font-family: var(--fuente);
+    font-size: var(--font-size-S);
+    color: red;
+}
 
